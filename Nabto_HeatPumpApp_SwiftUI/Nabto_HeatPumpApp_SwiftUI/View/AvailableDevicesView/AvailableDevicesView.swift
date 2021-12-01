@@ -24,14 +24,24 @@ struct AvailableDevicesView: View {
     
     init (){
         
-        client = Client()
         scanner.addMdnsResultReceiver(mdnsReciever)
         
-        try? client.setLogLevel(level: "trace")
-        client.enableNsLogLogging()
         
-        try? scanner.start() //better error handling? INVALID_STATE exception
-                
+        do {
+            try client.setLogLevel(level: "trace")
+            client.enableNsLogLogging()
+            
+            try scanner.start()
+
+        }catch NabtoEdgeClientError.INVALID_ARGUMENT{
+            print("Invalid level")
+        }
+        catch NabtoEdgeClientError.INVALID_STATE{
+            print("The scan could not be started, e.g. the client is being stopped")
+        }
+        catch let error{
+            print(error)
+        }
     }
     
     
