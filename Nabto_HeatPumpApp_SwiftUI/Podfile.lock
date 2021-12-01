@@ -1,0 +1,20 @@
+PODS:
+  - CBOR (0.2.0)
+  - NabtoEdgeClientSwift (2.0.0)
+
+DEPENDENCIES:
+  - CBOR (~> 0.2)
+  - NabtoEdgeClientSwift
+
+SPEC REPOS:
+  trunk:
+    - CBOR
+    - NabtoEdgeClientSwift
+
+SPEC CHECKSUMS:
+  CBOR: f1117a073b831a9a55afefe36f4e29fb258571cb
+  NabtoEdgeClientSwift: 47778d9415951ed86fed93cdc62cef7a1d64597a
+
+PODFILE CHECKSUM: 14e60225553d5dad0becd3f72869274accf4c1fa
+
+COCOAPODS: 1.11.2

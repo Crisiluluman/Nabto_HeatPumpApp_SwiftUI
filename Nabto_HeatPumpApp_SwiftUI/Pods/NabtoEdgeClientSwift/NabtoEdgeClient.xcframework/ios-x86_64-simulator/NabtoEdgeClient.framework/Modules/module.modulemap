@@ -1,0 +1,4 @@
+framework module NabtoEdgeClient {
+  header "NabtoEdgeClient-Swift.h"
+  requires objc
+}

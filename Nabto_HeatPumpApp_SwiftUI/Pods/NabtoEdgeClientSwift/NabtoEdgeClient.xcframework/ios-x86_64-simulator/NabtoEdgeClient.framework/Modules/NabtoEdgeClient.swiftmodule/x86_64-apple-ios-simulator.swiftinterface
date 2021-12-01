@@ -1,0 +1,176 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5.1 (swiftlang-1300.0.31.4 clang-1300.0.29.6)
+// swift-module-flags: -target x86_64-apple-ios10.2-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name NabtoEdgeClient
+import Foundation
+import Swift
+import _Concurrency
+public typealias LogCallBackReceiver = (NabtoEdgeClient.NabtoEdgeClientLogMessage) -> Swift.Void
+public typealias AsyncStatusReceiver = (NabtoEdgeClient.NabtoEdgeClientError) -> Swift.Void
+public struct NabtoEdgeClientLogMessage {
+}
+@objc @_inheritsConvenienceInitializers public class Client : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  @objc deinit
+  public static func versionString() -> Swift.String
+  public func createConnection() throws -> NabtoEdgeClient.Connection
+  public func createPrivateKey() throws -> Swift.String
+  public func createMdnsScanner(subType: Swift.String? = nil) -> NabtoEdgeClient.MdnsScanner
+  public func enableNsLogLogging()
+  public func setLogLevel(level: Swift.String) throws
+  public func setLogCallBack(cb: @escaping NabtoEdgeClient.LogCallBackReceiver)
+  public func stop()
+}
+@objc public enum NabtoEdgeClientConnectionEvent : Swift.Int {
+  case CONNECTED
+  case CLOSED
+  case CHANNEL_CHANGED
+  case UNEXPECTED_EVENT
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol ConnectionEventReceiver {
+  @objc func onEvent(event: NabtoEdgeClient.NabtoEdgeClientConnectionEvent)
+}
+@objc @_hasMissingDesignatedInitializers public class Connection : ObjectiveC.NSObject {
+  @objc deinit
+  public func connect() throws
+  public func connectAsync(closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func close() throws
+  public func stop()
+  public func closeAsync(closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func updateOptions(json: Swift.String) throws
+  public func passwordAuthenticate(username: Swift.String, password: Swift.String) throws
+  public func passwordAuthenticateAsync(username: Swift.String, password: Swift.String, closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func getOptions() throws -> Swift.String
+  public func setPrivateKey(key: Swift.String) throws
+  public func getDeviceFingerprintHex() throws -> Swift.String
+  public func getClientFingerprintHex() throws -> Swift.String
+  public func createStream() throws -> NabtoEdgeClient.Stream
+  public func createCoapRequest(method: Swift.String, path: Swift.String) throws -> NabtoEdgeClient.CoapRequest
+  public func createTcpTunnel() throws -> NabtoEdgeClient.TcpTunnel
+  public func addConnectionEventsReceiver(cb: NabtoEdgeClient.ConnectionEventReceiver) throws
+  public func removeConnectionEventsReceiver(cb: NabtoEdgeClient.ConnectionEventReceiver)
+}
+public enum ContentFormat : Swift.UInt16 {
+  case TEXT_PLAIN
+  case APPLICATION_XML
+  case APPLICATION_OCTET_STREAM
+  case APPLICATION_CBOR
+  public init?(rawValue: Swift.UInt16)
+  public typealias RawValue = Swift.UInt16
+  public var rawValue: Swift.UInt16 {
+    get
+  }
+}
+public typealias CoapResponseReceiver = (NabtoEdgeClient.NabtoEdgeClientError, NabtoEdgeClient.CoapResponse?) -> Swift.Void
+@_hasMissingDesignatedInitializers public class CoapRequest {
+  @objc deinit
+  public func setRequestPayload(contentFormat: Swift.UInt16, data: Foundation.Data) throws
+  public func setRequestPayloadString(contentFormat: Swift.UInt16, string: Swift.String) throws
+  public func execute() throws -> NabtoEdgeClient.CoapResponse
+  public func executeAsync(closure: @escaping NabtoEdgeClient.CoapResponseReceiver)
+  public func stop()
+}
+indirect public enum NabtoEdgeClientError : Swift.Error, Swift.Equatable {
+  case OK
+  case ALLOCATION_ERROR
+  case CONNECTION_REFUSED
+  case DNS
+  case EOF
+  case FORBIDDEN
+  case INVALID_ARGUMENT
+  case INVALID_STATE
+  case NONE
+  case NOT_ATTACHED
+  case NOT_CONNECTED
+  case NOT_FOUND
+  case NO_CHANNELS(localError: NabtoEdgeClient.NabtoEdgeClientError, remoteError: NabtoEdgeClient.NabtoEdgeClientError)
+  case NO_DATA
+  case OPERATION_IN_PROGRESS
+  case STOPPED
+  case TIMEOUT
+  case TOKEN_REJECTED
+  case UNAUTHORIZED
+  case UNKNOWN_DEVICE_ID
+  case UNKNOWN_PRODUCT_ID
+  case UNKNOWN_SERVER_KEY
+  case FAILED
+  case UNEXPECTED_API_STATUS
+  public static func == (a: NabtoEdgeClient.NabtoEdgeClientError, b: NabtoEdgeClient.NabtoEdgeClientError) -> Swift.Bool
+}
+public typealias AsyncDataReceiver = (NabtoEdgeClient.NabtoEdgeClientError, Foundation.Data?) -> Swift.Void
+@_hasMissingDesignatedInitializers public class Stream {
+  @objc deinit
+  public func open(streamPort: Swift.UInt32) throws
+  public func openAsync(streamPort: Swift.UInt32, closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func write(data: Foundation.Data) throws
+  public func writeAsync(data: Foundation.Data, closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func readSome() throws -> Foundation.Data
+  public func readSomeAsync(closure: @escaping NabtoEdgeClient.AsyncDataReceiver)
+  public func readAll(length: Swift.Int) throws -> Foundation.Data
+  public func readAllAsync(length: Swift.Int, closure: @escaping NabtoEdgeClient.AsyncDataReceiver)
+  public func close() throws
+  public func closeAsync(closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func abort()
+  public func stop()
+}
+@_hasMissingDesignatedInitializers public class TcpTunnel {
+  @objc deinit
+  public func open(service: Swift.String, localPort: Swift.UInt16) throws
+  public func openAsync(service: Swift.String, localPort: Swift.UInt16, closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func getLocalPort() throws -> Swift.UInt16
+  public func close() throws
+  public func closeAsync(closure: @escaping NabtoEdgeClient.AsyncStatusReceiver)
+  public func stop()
+}
+@_hasMissingDesignatedInitializers public class CoapResponse {
+  final public let status: Swift.UInt16
+  final public let contentFormat: Swift.UInt16!
+  final public let payload: Foundation.Data!
+  @objc deinit
+}
+@objc @_hasMissingDesignatedInitializers public class MdnsResult : ObjectiveC.NSObject {
+  @objc public enum Action : Swift.Int {
+    case ADD
+    case UPDATE
+    case REMOVE
+    case UNEXPECTED_ACTION
+    public init?(rawValue: Swift.Int)
+    public typealias RawValue = Swift.Int
+    public var rawValue: Swift.Int {
+      get
+    }
+  }
+  final public let serviceInstanceName: Swift.String
+  final public let action: NabtoEdgeClient.MdnsResult.Action
+  final public let deviceId: Swift.String!
+  final public let productId: Swift.String!
+  final public let txtItems: [Swift.String : Swift.String]
+  @objc override dynamic public var description: Swift.String {
+    @objc get
+  }
+  @objc deinit
+}
+@objc public protocol MdnsResultReceiver {
+  @objc func onResultReady(result: NabtoEdgeClient.MdnsResult)
+}
+@objc @_hasMissingDesignatedInitializers public class MdnsScanner : ObjectiveC.NSObject {
+  @objc deinit
+  public func start() throws
+  public func stop()
+  public func isStarted() -> Swift.Bool
+  public func addMdnsResultReceiver(_ cb: NabtoEdgeClient.MdnsResultReceiver)
+  public func removeMdnsResultReceiver(_ cb: NabtoEdgeClient.MdnsResultReceiver)
+}
+extension NabtoEdgeClient.NabtoEdgeClientConnectionEvent : Swift.Equatable {}
+extension NabtoEdgeClient.NabtoEdgeClientConnectionEvent : Swift.Hashable {}
+extension NabtoEdgeClient.NabtoEdgeClientConnectionEvent : Swift.RawRepresentable {}
+extension NabtoEdgeClient.ContentFormat : Swift.Equatable {}
+extension NabtoEdgeClient.ContentFormat : Swift.Hashable {}
+extension NabtoEdgeClient.ContentFormat : Swift.RawRepresentable {}
+extension NabtoEdgeClient.MdnsResult.Action : Swift.Equatable {}
+extension NabtoEdgeClient.MdnsResult.Action : Swift.Hashable {}
+extension NabtoEdgeClient.MdnsResult.Action : Swift.RawRepresentable {}

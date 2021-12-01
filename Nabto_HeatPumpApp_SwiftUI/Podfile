@@ -1,0 +1,15 @@
+
+platform :ios, '12.0'
+
+ use_frameworks!
+
+
+target 'Nabto_HeatPumpApp_SwiftUI' do
+
+  pod 'NabtoEdgeClientSwift'
+  pod 'CBOR', '~> 0.2'
+
+
+
+end
+
