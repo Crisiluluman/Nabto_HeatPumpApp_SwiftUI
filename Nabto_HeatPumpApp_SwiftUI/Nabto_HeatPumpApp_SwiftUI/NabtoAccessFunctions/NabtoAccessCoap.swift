@@ -7,7 +7,7 @@
 
 import Foundation
 import NabtoEdgeClient
-import CBOR
+//import CBOR
 
 public class NabtoAccessCoap{
         
@@ -133,14 +133,14 @@ public class NabtoAccessCoap{
             
             let coap = try connection.createCoapRequest(method: "POST", path: "/iam/pairing/local-open")
             
-            let json: [String:String] = ["Username": username]
+           // let json: [String:String] = ["Username": username]
             
-            let cbor = CBOR.encode(json)
+           // let cbor = CBOR.encode(json)
             
             let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
             
-            let data = try encoder.encode(json)
+          //  let data = try encoder.encode(json)
 
             //let stringData = String(data: data, encoding: .utf8)!
             

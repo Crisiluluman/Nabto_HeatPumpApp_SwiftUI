@@ -10,6 +10,7 @@ import NabtoEdgeClient
 
 private var client: Client = Client()
 
+
 //private var discoveredDevices : [Device] = []
 //private var discoveredDevicesSet = Set<Device>()
 //private var discoveredDevices = Array(Set(discoveredDevicesSet))
@@ -25,6 +26,9 @@ struct AvailableDevicesView: View {
         
         client = Client()
         scanner.addMdnsResultReceiver(mdnsReciever)
+        
+        try? client.setLogLevel(level: "trace")
+        client.enableNsLogLogging()
         
         try? scanner.start() //better error handling? INVALID_STATE exception
                 
@@ -86,6 +90,7 @@ struct AvailableDevicesView: View {
     public class MdnsRecieve: MdnsResultReceiver , ObservableObject {
         
         @Published var discoveredDevices : [Device] = []
+        
         
         public func onResultReady(result: MdnsResult) {
 

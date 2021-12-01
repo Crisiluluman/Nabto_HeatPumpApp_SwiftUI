@@ -21,7 +21,7 @@ struct SplashscreenView: View {
                     //.navigationTitle(Text("Front"))
                 
                 
-                NavigationLink(destination: IntroductionScreen(), label: {
+                NavigationLink(destination: IntroductionView(), label: {
                     Text("Nabto").font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color("LightGreyText"))

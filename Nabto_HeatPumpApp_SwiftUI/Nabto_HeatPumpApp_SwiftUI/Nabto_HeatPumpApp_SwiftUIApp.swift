@@ -11,7 +11,7 @@ import SwiftUI
 struct Nabto_HeatPumpApp_SwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            IntroductionView()
         }
     }
 }

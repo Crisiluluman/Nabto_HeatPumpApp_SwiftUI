@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IntroductionScreen: View {
+struct IntroductionView: View {
     @State var device: String = ""
     @State var selection: Int? = nil
     
@@ -47,7 +47,7 @@ struct IntroductionScreen: View {
                     Divider()
                     Spacer()
                     
-                    
+
                     
                     TextField("Name from phone", text: $device)
                         .padding(.vertical, 6.0)
@@ -72,6 +72,7 @@ struct IntroductionScreen: View {
                         {
                             Button(action: {
                                 self.selection  = 1
+
                             }) {
                                 Text("Not paired yet")
                                     .fontWeight(.bold)
@@ -134,7 +135,7 @@ struct IntroductionScreen: View {
     
     struct MainScreenView_Previews: PreviewProvider {
         static var previews: some View {
-            IntroductionScreen()
+            IntroductionView()
         }
     }
     /*

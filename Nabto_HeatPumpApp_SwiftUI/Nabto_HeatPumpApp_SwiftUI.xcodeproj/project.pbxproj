@@ -12,7 +12,7 @@
 		9D2DB6A32757C41500AC9087 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB6A22757C41500AC9087 /* Preview Assets.xcassets */; };
 		9D2DB6BC2757D8BD00AC9087 /* NabtoAccessCoap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6AB2757D8BC00AC9087 /* NabtoAccessCoap.swift */; };
 		9D2DB6BD2757D8BD00AC9087 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6AD2757D8BC00AC9087 /* Device.swift */; };
-		9D2DB6BE2757D8BD00AC9087 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6B02757D8BD00AC9087 /* MainScreenView.swift */; };
+		9D2DB6BE2757D8BD00AC9087 /* IntroductionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6B02757D8BD00AC9087 /* IntroductionView.swift */; };
 		9D2DB6BF2757D8BD00AC9087 /* PairNewDeviceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6B22757D8BD00AC9087 /* PairNewDeviceView.swift */; };
 		9D2DB6C02757D8BD00AC9087 /* AvailableDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6B42757D8BD00AC9087 /* AvailableDevicesView.swift */; };
 		9D2DB6C12757D8BD00AC9087 /* NotPairedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6B62757D8BD00AC9087 /* NotPairedView.swift */; };
@@ -32,7 +32,7 @@
 		9D2DB6A22757C41500AC9087 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9D2DB6AB2757D8BC00AC9087 /* NabtoAccessCoap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NabtoAccessCoap.swift; sourceTree = "<group>"; };
 		9D2DB6AD2757D8BC00AC9087 /* Device.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
-		9D2DB6B02757D8BD00AC9087 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		9D2DB6B02757D8BD00AC9087 /* IntroductionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroductionView.swift; sourceTree = "<group>"; };
 		9D2DB6B22757D8BD00AC9087 /* PairNewDeviceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairNewDeviceView.swift; sourceTree = "<group>"; };
 		9D2DB6B42757D8BD00AC9087 /* AvailableDevicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AvailableDevicesView.swift; sourceTree = "<group>"; };
 		9D2DB6B62757D8BD00AC9087 /* NotPairedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotPairedView.swift; sourceTree = "<group>"; };
@@ -67,7 +67,6 @@
 				1B158927E575006BB76457FB /* Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig */,
 				67BDEC21F16786BFED5766E9 /* Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -137,7 +136,7 @@
 		9D2DB6AE2757D8BD00AC9087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9D2DB6AF2757D8BD00AC9087 /* IntroductionScreen */,
+				9D2DB6AF2757D8BD00AC9087 /* IntroductionView */,
 				9D2DB6B12757D8BD00AC9087 /* PairNewDeviceView */,
 				9D2DB6B32757D8BD00AC9087 /* AvailableDevicesView */,
 				9D2DB6B52757D8BD00AC9087 /* NotPairedView */,
@@ -147,12 +146,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		9D2DB6AF2757D8BD00AC9087 /* IntroductionScreen */ = {
+		9D2DB6AF2757D8BD00AC9087 /* IntroductionView */ = {
 			isa = PBXGroup;
 			children = (
-				9D2DB6B02757D8BD00AC9087 /* MainScreenView.swift */,
+				9D2DB6B02757D8BD00AC9087 /* IntroductionView.swift */,
 			);
-			path = IntroductionScreen;
+			path = IntroductionView;
 			sourceTree = "<group>";
 		};
 		9D2DB6B12757D8BD00AC9087 /* PairNewDeviceView */ = {
@@ -318,7 +317,7 @@
 				9D2DB6BC2757D8BD00AC9087 /* NabtoAccessCoap.swift in Sources */,
 				9D2DB6BF2757D8BD00AC9087 /* PairNewDeviceView.swift in Sources */,
 				9D2DB6C22757D8BD00AC9087 /* PairedDevicesView.swift in Sources */,
-				9D2DB6BE2757D8BD00AC9087 /* MainScreenView.swift in Sources */,
+				9D2DB6BE2757D8BD00AC9087 /* IntroductionView.swift in Sources */,
 				9D2DB6C12757D8BD00AC9087 /* NotPairedView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +456,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -487,6 +487,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
