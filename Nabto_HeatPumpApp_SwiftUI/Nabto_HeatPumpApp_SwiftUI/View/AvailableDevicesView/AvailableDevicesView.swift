@@ -20,6 +20,8 @@ private var mdnsResults : [MdnsResult] = []
 struct AvailableDevicesView: View {
 
     @ObservedObject var mdnsReciever: MdnsRecieve = MdnsRecieve()
+    @State var isTapped = false
+    
     private var scanner = client.createMdnsScanner()
     
     init (){
@@ -28,8 +30,8 @@ struct AvailableDevicesView: View {
         
         
         do {
-            try client.setLogLevel(level: "trace")
-            client.enableNsLogLogging()
+            //try client.setLogLevel(level: "trace")
+            //client.enableNsLogLogging()
             
             try scanner.start()
 
@@ -65,13 +67,13 @@ struct AvailableDevicesView: View {
             }
             
             else {
-                NavigationView {
+              //  NavigationView {
                     
                     
                     List(mdnsReciever.discoveredDevices)
                     {
                         device in
-                        NavigationLink(destination: PairNewDevice(deviceId: device.deviceId, productId: device.productId))
+                        NavigationLink(destination: PairNewDevice(deviceId: device.deviceId, productId: device.productId), isActive: $isTapped)
                         {
                             //Spacer()
                             HStack {
@@ -79,18 +81,19 @@ struct AvailableDevicesView: View {
                                 Spacer()
                                 VStack(alignment: .leading) {
                                     
+                                    
                                     Text("ProductID:  \(device.productId)")
                                     Text("DeviceID:  \(device.deviceId )")
 
                                 }
+                            }.onTapGesture {
+                                isTapped = true
+                                scanner.stop()
                             }
-                            //TODO: Onclick i stedet, men mangler mere research
-                        }.onAppear {
-                            scanner.stop()
                         }
                     }
                 }
-            }
+            //}
             
             Spacer()
         }
