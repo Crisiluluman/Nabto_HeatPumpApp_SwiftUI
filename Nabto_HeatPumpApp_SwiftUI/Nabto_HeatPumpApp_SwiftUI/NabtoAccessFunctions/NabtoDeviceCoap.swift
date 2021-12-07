@@ -9,60 +9,8 @@ import Foundation
 import NabtoEdgeClient
 import CBOR
 
-public class NabtoAccessCoap{
+public class NabtoDeviceCoap : NabtoAccessConnect{
         
-    var client: Client
-    var connection: Connection! = nil
-    
-    init(){
-        client = Client()
-    }
-    
-    //Preapares the connection for the given device
-    func prepareConnect(_ device: Device){
-        do {
-            let key = try client.createPrivateKey()
-            
-            try connection.setPrivateKey(key: key)
-            try connection.updateOptions(json: device.asJson())
-
-        }
-        catch NabtoEdgeClientError.FAILED{
-            print("Key could not be created")
-        }
-        catch NabtoEdgeClientError.INVALID_STATE{
-            print("Connection not in setup phase")
-        }
-        catch NabtoEdgeClientError.INVALID_ARGUMENT{
-            print("Input is invalid")
-        }
-        catch let error {
-            print(error)
-        }
-        
-    }
-    
-    
-    //Establishes connectiong for the given device
-    func connect(_ device: Device){
-        do {
-            prepareConnect(device)
-            try connection.connect()
-        }
-        catch NabtoEdgeClientError.UNAUTHORIZED{
-            print("Authentication option do not match the basestation configuration")
-        }
-        catch NabtoEdgeClientError.TOKEN_REJECTED{
-            print("Could not validate specific token")
-        }
-        catch let error {
-            print(error)
-        }
-        
-        
-    }
-    
-
     //Simple Hello World Test
     func simpleCoapTest(_ device: Device){
         
@@ -90,6 +38,7 @@ public class NabtoAccessCoap{
     }
     
     
+    //Retrives pairing
     func getPairing(_ device: Device){
         do {
             
@@ -124,6 +73,7 @@ public class NabtoAccessCoap{
     }
     
     
+    //Creates a local Open pairing
     func localOpenPairing(_ device: Device, _ username: String){
         do {
             
@@ -180,6 +130,7 @@ public class NabtoAccessCoap{
     }
     
     
+    //Initial pairing af devicet til Adminstrator
     func localInitalPairing(_ device: Device){
         do {
             
@@ -227,6 +178,7 @@ public class NabtoAccessCoap{
     }
      
     
+    //Password pairing
     func passwordOpenPairing(_ device: Device,_ username: String, _ password: String){
         do {
             

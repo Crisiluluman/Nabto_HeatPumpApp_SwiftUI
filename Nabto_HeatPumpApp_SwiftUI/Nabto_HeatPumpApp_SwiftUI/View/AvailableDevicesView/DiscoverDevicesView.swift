@@ -1,5 +1,4 @@
-//
-//  PairNewDeviceView.swift
+// PairNewDeviceView.swift
 //  NabtoHeatPumpApp
 //
 //  Created by Christopher Larsen on 04/10/2021.
@@ -10,15 +9,10 @@ import NabtoEdgeClient
 
 private var client: Client = Client()
 
-
-//private var discoveredDevices : [Device] = []
-//private var discoveredDevicesSet = Set<Device>()
-//private var discoveredDevices = Array(Set(discoveredDevicesSet))
-
 private var mdnsResults : [MdnsResult] = []
 
-struct AvailableDevicesView: View {
-
+struct DiscoverDevicesView: View {
+    
     @ObservedObject var mdnsReciever: MdnsRecieve = MdnsRecieve()
     @State var isTapped = false
     
@@ -28,13 +22,9 @@ struct AvailableDevicesView: View {
         
         scanner.addMdnsResultReceiver(mdnsReciever)
         
-        
         do {
-            //try client.setLogLevel(level: "trace")
-            //client.enableNsLogLogging()
-            
             try scanner.start()
-
+            
         }catch NabtoEdgeClientError.INVALID_ARGUMENT{
             print("Invalid level")
         }
@@ -49,99 +39,96 @@ struct AvailableDevicesView: View {
     
     var body: some View {
         
-        // NavigationView{
         VStack(alignment: .leading) {
             
+            //If the scanner is empty, this is showed instead
             if (mdnsReciever.discoveredDevices.isEmpty){
                 VStack(alignment: .leading){
                     Spacer()
-
+                    
                     Text("Looking for devices (Spinning icon)")
                     
-
+                    
                     Text("Please make sure you are connected to the local network with the device")
                     Spacer()
-
+                    
                 }
                 
             }
             
             else {
-              //  NavigationView {
-                    
-                    
-                    List(mdnsReciever.discoveredDevices)
+                
+                //Lists the devices discovered by the MdnsScanner
+                List(mdnsReciever.discoveredDevices)
+                {
+                    device in
+                    NavigationLink(destination: PairNewDeviceView(deviceId: device.deviceId, productId: device.productId), isActive: $isTapped)
                     {
-                        device in
-                        NavigationLink(destination: PairNewDevice(deviceId: device.deviceId, productId: device.productId), isActive: $isTapped)
-                        {
-                            //Spacer()
-                            HStack {
-                                Image(systemName: "photo")
-                                Spacer()
-                                VStack(alignment: .leading) {
-                                    
-                                    
-                                    Text("ProductID:  \(device.productId)")
-                                    Text("DeviceID:  \(device.deviceId )")
-
-                                }
-                            }.onTapGesture {
-                                isTapped = true
-                                scanner.stop()
+                        HStack {
+                            Image("emptyImg")
+                                .resizable()
+                                .frame(width: 30.0, height: 30.0)
+                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
+                            Spacer()
+                            VStack(alignment: .leading) {
+                                
+                                
+                                Text("ProductID:  \(device.productId)")
+                                Text("DeviceID:  \(device.deviceId )")
+                                
                             }
+                        }.onTapGesture {
+                            isTapped = true
+                            scanner.stop()
                         }
                     }
                 }
+            }
             //}
             
             Spacer()
-        }
+        }.toolbar{HomeToolbar()}
+        .navigationViewStyle(StackNavigationViewStyle())
+        .navigationTitle("Pair new device").font(.subheadline)
     }
-
     
+    //MdnsScanner which should not be in this class, but I've tried removing it without luck
     public class MdnsRecieve: MdnsResultReceiver , ObservableObject {
         
         @Published var discoveredDevices : [Device] = []
         
         
         public func onResultReady(result: MdnsResult) {
-
+            
             DispatchQueue.main.async()
             {
                 
                 let resultProductId : String = result.productId
                 let resultDeviceId : String = result.deviceId
-
+                
                 let device: Device = Device(productId: resultProductId, deviceId: resultDeviceId)
-
+                
                 self.discoveredDevices.append(device)
-
-
+                
+                
             }
         }
     }
+}
 
-    
 
 
 struct PairNewDeviceView_Previews: PreviewProvider {
     static var previews: some View {
-        AvailableDevicesView()
+        DiscoverDevicesView()
         
     }
     
 }
 
 
-//TODO: Make MVVM WORK
-
-class PairNewDeviceViewModel{
-}
 
 
-
-}
 
 
 

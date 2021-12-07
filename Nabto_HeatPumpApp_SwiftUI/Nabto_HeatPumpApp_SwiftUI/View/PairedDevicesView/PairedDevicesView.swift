@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+
+//Currently not used?
 struct PairedDevicesView: View {
     
     var body: some View {
@@ -15,7 +17,7 @@ struct PairedDevicesView: View {
 
             Text("Paired Devices")
             
-        }
+        }.toolbar{MainToolbar()}
         
         
     }
