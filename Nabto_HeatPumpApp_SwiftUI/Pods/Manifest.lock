@@ -1,20 +1,24 @@
 PODS:
+  - AlertToast (1.3.7)
   - CBOR (0.2.0)
   - NabtoEdgeClientSwift (2.0.0)
 
 DEPENDENCIES:
+  - AlertToast
   - CBOR (~> 0.2)
   - NabtoEdgeClientSwift
 
 SPEC REPOS:
   trunk:
+    - AlertToast
     - CBOR
     - NabtoEdgeClientSwift
 
 SPEC CHECKSUMS:
+  AlertToast: 8c9d5efb2df6ea728b32b62bce99d876ec3e5393
   CBOR: f1117a073b831a9a55afefe36f4e29fb258571cb
   NabtoEdgeClientSwift: 47778d9415951ed86fed93cdc62cef7a1d64597a
 
-PODFILE CHECKSUM: 14e60225553d5dad0becd3f72869274accf4c1fa
+PODFILE CHECKSUM: 80ca2fe92cf876ece95514f06eb3975d9f2e6046
 
 COCOAPODS: 1.11.2

@@ -176,10 +176,12 @@ code_sign_if_enabled() {
 }
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AlertToast/AlertToast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CBOR/CBOR.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/NabtoEdgeClientSwift/NabtoEdgeClient.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/AlertToast/AlertToast.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/CBOR/CBOR.framework"
   install_framework "${PODS_XCFRAMEWORKS_BUILD_DIR}/NabtoEdgeClientSwift/NabtoEdgeClient.framework"
 fi

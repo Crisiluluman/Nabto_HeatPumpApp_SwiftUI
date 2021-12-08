@@ -6,18 +6,19 @@
 //
 
 import SwiftUI
+import AlertToast
 
 
 struct PairNewDeviceView: View {
     
     @State private var viewModel: PairNewDeviceViewModel = PairNewDeviceViewModel()
+    @State private var showToast = false
+    @State private var isTapped: Bool = false
+    
+    @State var descriptiveName: String = ""
     
     var deviceId: String;
     var productId: String;
-    
-    @State var isTapped: Bool = false
-    @State var descriptiveName: String = ""
-    
     
     var body: some View {
         VStack {
@@ -35,13 +36,13 @@ struct PairNewDeviceView: View {
                 .font(.title)
                 .padding(.bottom, 10.0)
                 .frame(width: 300.0, alignment: .leading)
-                
-
+            
+            
             
             Text("Descriptive name:")
                 .font(.title)
                 .frame(width: 300.0, alignment: .leading)
-                
+            
             
             //Textfield for the "descriptive device" name
             TextField("Descriptive name:", text: $descriptiveName)
@@ -57,16 +58,23 @@ struct PairNewDeviceView: View {
             Text("Please give device a descriptive name. Especially important if you have access to multiple devices")
                 .frame(width: 300.0, alignment: .leading)
                 .padding(.vertical, 6.0)
-
+            
             Spacer()
             
             
             HStack{
                 Spacer()
-
+                
                 //Button for pairing device
                 Button(action: {
-                    //TODO: Pair device, initial or localOpen?
+                    
+                    if(descriptiveName.isEmpty){
+                        showToast.toggle()
+                    }
+                    else{
+                        //TODO: Pair device, initial or localOpen?
+                        
+                    }
                     
                 }, label: {
                     
@@ -76,9 +84,9 @@ struct PairNewDeviceView: View {
                 }).frame(width: 100.0)
                     .background(Color("NabtoOrange"))
                     .cornerRadius(5)
-                    
-
-
+                
+                
+                
                 
                 Spacer()
                 
@@ -94,17 +102,20 @@ struct PairNewDeviceView: View {
                     }).frame(width: 100.0)
                         .background(Color("NabtoOrange"))
                         .cornerRadius(5)
-
-
+                    
+                    
                 }.isDetailLink(false)//.navigationBarBackButtonHidden(true)
                 
                 Spacer()
-
+                
                 
             }
             Spacer()
-
-        }
+            
+        }.navigationTitle("Pair device")
+            .toast(isPresenting: $showToast){
+                AlertToast(type: .regular, title: "Please type a device name")
+            }
     }
     
     

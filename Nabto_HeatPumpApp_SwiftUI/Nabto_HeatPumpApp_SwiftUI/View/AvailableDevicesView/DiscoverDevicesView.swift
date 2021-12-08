@@ -39,57 +39,73 @@ struct DiscoverDevicesView: View {
     
     var body: some View {
         
-        VStack(alignment: .leading) {
+        ZStack {
             
-            //If the scanner is empty, this is showed instead
-            if (mdnsReciever.discoveredDevices.isEmpty){
-                VStack(alignment: .leading){
-                    Spacer()
-                    
-                    Text("Looking for devices (Spinning icon)")
-                    
-                    
-                    Text("Please make sure you are connected to the local network with the device")
-                    Spacer()
+            Color("Background")
+                .ignoresSafeArea()
+                .opacity(0.6)
+            
+            VStack {
+                
+                Spacer()
+                
+                Image("emptyImg")
+                    .resizable()
+                    .frame(width: 300.0, height: 150.0)
+                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
+                
+                Spacer()
+                
+                //If the scanner is empty, this is showed instead
+                if (mdnsReciever.discoveredDevices.isEmpty){
+                    VStack(alignment: .leading){
+                        Spacer()
+                        
+                        Text("Looking for devices (Spinning icon)")
+                        
+                        
+                        Text("Please make sure you are connected to the local network with the device")
+                        Spacer()
+                        
+                    }
                     
                 }
                 
-            }
-            
-            else {
-                
-                //Lists the devices discovered by the MdnsScanner
-                List(mdnsReciever.discoveredDevices)
-                {
-                    device in
-                    NavigationLink(destination: PairNewDeviceView(deviceId: device.deviceId, productId: device.productId), isActive: $isTapped)
+                else {
+                    
+                    //Lists the devices discovered by the MdnsScanner
+                    List(mdnsReciever.discoveredDevices)
                     {
-                        HStack {
-                            Image("emptyImg")
-                                .resizable()
-                                .frame(width: 30.0, height: 30.0)
-                                .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
-                            Spacer()
-                            VStack(alignment: .leading) {
-                                
-                                
-                                Text("ProductID:  \(device.productId)")
-                                Text("DeviceID:  \(device.deviceId )")
-                                
+                        device in
+                        NavigationLink(destination: PairNewDeviceView(deviceId: device.deviceId, productId: device.productId), isActive: $isTapped)
+                        {
+                            HStack {
+                                Image("emptyImg")
+                                    .resizable()
+                                    .frame(width: 30.0, height: 30.0)
+                                    .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: 2)
+                                Spacer()
+                                VStack(alignment: .leading) {
+                                    
+                                    
+                                    Text("ProductID:  \(device.productId)")
+                                    Text("DeviceID:  \(device.deviceId )")
+                                    
+                                }
+                            }.onTapGesture {
+                                isTapped = true
+                                scanner.stop()
                             }
-                        }.onTapGesture {
-                            isTapped = true
-                            scanner.stop()
                         }
                     }
                 }
-            }
-            //}
+                
+                Spacer()
+            }.toolbar{HomeToolbar()}
             
-            Spacer()
-        }.toolbar{HomeToolbar()}
-        .navigationViewStyle(StackNavigationViewStyle())
+            
         .navigationTitle("Pair new device").font(.subheadline)
+        }
     }
     
     //MdnsScanner which should not be in this class, but I've tried removing it without luck

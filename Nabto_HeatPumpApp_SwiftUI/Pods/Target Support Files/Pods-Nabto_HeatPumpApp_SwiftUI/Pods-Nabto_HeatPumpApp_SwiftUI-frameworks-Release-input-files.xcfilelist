@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI/Pods-Nabto_HeatPumpApp_SwiftUI-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AlertToast/AlertToast.framework
 ${BUILT_PRODUCTS_DIR}/CBOR/CBOR.framework
 ${PODS_XCFRAMEWORKS_BUILD_DIR}/NabtoEdgeClientSwift/NabtoEdgeClient.framework/NabtoEdgeClient

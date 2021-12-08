@@ -6,16 +6,18 @@
 //
 
 import SwiftUI
+import AlertToast
 
 
 struct IntroductionView: View {
+    
     @State private var viewModel = IntroductionViewModel()
     
+    @State private var showToast = false
+    @State private var selection: Int? = nil
     
     @State var _username: String = ""
-    @State var selection: Int? = nil
     
-    @State var isTapped : Bool = false
     
     var body: some View {
         
@@ -52,10 +54,14 @@ struct IntroductionView: View {
                         text: $_username,
                         
                         onCommit: {
-                            viewModel.createUser(username: _username)
-                            
-                            //TODO: Check if the username exists, then decide which view to take
-                            self.selection  = 1
+                            if(_username.isEmpty){
+                                showToast.toggle()
+                            }
+                            else{
+                                viewModel.createUser(username: _username)
+                                //TODO: Check if the username exists, then decide which view to take
+                                self.selection  = 1
+                            }
                         }
                     ).padding(.vertical, 6.0)
                         .border(/*@START_MENU_TOKEN@*/Color.black/*@END_MENU_TOKEN@*/, width: /*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
@@ -64,16 +70,22 @@ struct IntroductionView: View {
                         .textInputAutocapitalization(.never)
                         .background(.white)
                     
-
+                    
                     Spacer()
                     
-             
+                    
                     Text("This name will be the friendly name which will identify you when accessing devices.\nThis is used when the administrator and other users of the device give you access permissions, so it should be something recognizable.")
                     Spacer()
                     
-                  
+                    
                 }.padding()
-                                
+                    .toast(isPresenting: $showToast){
+                        // `.alert` is the default displayMode
+                        AlertToast(type: .regular, title: "Please type a username")
+                        //Choose .hud to toast alert from the top of the screen
+                        //AlertToast(displayMode: .hud, type: .regular, title: "Message Sent!")
+                    }
+                
             }
             
             //Hides the navigationbar on the IntroductionView, but colors the other navigationbarTexts with an orange color

@@ -16,78 +16,109 @@
 			dependencies = (
 			);
 			name = NabtoEdgeClientSwift;
-			productName = NabtoEdgeClientSwift;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		2B95E26FD248F9CE482CBF2754F5B841 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		4D674F465541F7E5D9F2056935E93B60 /* Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C789B26CFE42C604FFBAC811EE7988B3 /* Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m */; };
+		0EFF45C80C068E5C520FF6573CB6C414 /* Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C789B26CFE42C604FFBAC811EE7988B3 /* Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m */; };
+		352CB338812CD38CA9A30D60DE09EDD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		481F3BE2185022F134DFD932BBD79A40 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C5E5C32C5E8713F51971E8918963145 /* BlurView.swift */; };
+		5C7E1FD0252DFA6033E7E08D5984D7B0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		6A7B85C81C2DA0A354CFC3477D36F7FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		6BFC50FD658A24A63F1DEAECE25D020B /* CBOREncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83A2BB91DDDEB71712156FE5E1F1BAD /* CBOREncodable.swift */; };
-		70EFA8BAC3A7F07097EFE5A1B107EBFB /* CBOREncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75B1975B46AEB9D998E7B46265F0D180 /* CBOREncoder.swift */; };
-		72F3B979A0D344CAE2654A43FFE560D6 /* CBORDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790355C075F114F303911668B03C2105 /* CBORDecoder.swift */; };
-		7FBCB5B170D81E79515F182FFD70702E /* SwiftCBOR.h in Headers */ = {isa = PBXBuildFile; fileRef = 59C7EBF102B76ADB33FEFBAA2D9C6BAB /* SwiftCBOR.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		88AF7020DA1ACFD994BE322E18910035 /* CBOR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D279F1A8C8A684843F8E9A1826DE791A /* CBOR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		89A19BE0CC4B072F71D2155CB98883C5 /* Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9435E66F9C9D319E9B4B57A85164A8E9 /* Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9133440257946CFC27BB222886FE9FE3 /* CBORInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26778BB0A5ED409B2BBC504069600EA2 /* CBORInputStream.swift */; };
-		A69D5B6877949D4013A4FF92B110CF09 /* CBOR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DA8F36F75D29FBB578AC784F790911 /* CBOR-dummy.m */; };
-		D64CE1755213CC4208A467BE4FE5509C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 439629C4809498D64D7BFCFD79A483E2 /* Util.swift */; };
-		E041B7D3E827FD39D5406F6F92DBCAD0 /* CBOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0130F4078E66496952DBABE1430C35C /* CBOR.swift */; };
+		6BFC50FD658A24A63F1DEAECE25D020B /* CBOREncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02A7D1BED1401064DEBF7359628BB88C /* CBOREncodable.swift */; };
+		6EA08F424ACCD3B0D6222BEF90912961 /* AlertToast-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F303CB8BBA2D89EEF6BAEB8AFC0FC6C2 /* AlertToast-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		70EFA8BAC3A7F07097EFE5A1B107EBFB /* CBOREncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20E5E8A3F4357B8283E91E745C93A649 /* CBOREncoder.swift */; };
+		72F3B979A0D344CAE2654A43FFE560D6 /* CBORDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB3D0CB37ED25A9F468CF13FA042BDE9 /* CBORDecoder.swift */; };
+		7FBCB5B170D81E79515F182FFD70702E /* SwiftCBOR.h in Headers */ = {isa = PBXBuildFile; fileRef = 23B3F3DC86094B2EE275C93248C97753 /* SwiftCBOR.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		814DCB33C114C6E6B9D1645C15056AAD /* Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9435E66F9C9D319E9B4B57A85164A8E9 /* Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88AF7020DA1ACFD994BE322E18910035 /* CBOR-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A2109E36B22A67FB9170F46B8774565 /* CBOR-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89068BEF39B046B28FD6DA14201044DE /* AlertToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA332CB238012D866F3B8E59E434BBEE /* AlertToast.swift */; };
+		9133440257946CFC27BB222886FE9FE3 /* CBORInputStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D704CE5E8FBDF7AFFE69B28492C3D97 /* CBORInputStream.swift */; };
+		A69D5B6877949D4013A4FF92B110CF09 /* CBOR-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 953A4CC707DA7BA640F5C2097F046678 /* CBOR-dummy.m */; };
+		ABCC96A3F5A122791DAB8A1CFA9BD50D /* AlertToast-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED939A5CB1758C051382C0FC8A3D2E9 /* AlertToast-dummy.m */; };
+		D64CE1755213CC4208A467BE4FE5509C /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E860EAFB99628A2CCB69EDC7CA71CCF2 /* Util.swift */; };
+		DAE75918F0786809E98E99512119DF8D /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1C336F6ED1CE9AF77D65C7B8F0F148E /* ActivityIndicator.swift */; };
+		E041B7D3E827FD39D5406F6F92DBCAD0 /* CBOR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D198D2EC61FCD833729460AD012A25 /* CBOR.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D52421799547AB8F3373CDCE220DB157 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 98415E46B427BF9AA6DD4FBA6FA3AC2D;
-			remoteInfo = NabtoEdgeClientSwift;
-		};
-		FFB361AD81AC875460CE9C39852283B2 /* PBXContainerItemProxy */ = {
+		3F029596ADA8A3DCAB25F99C53DB63FE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D56183DF99A8634C6B1FFDA6DF7C22FF;
 			remoteInfo = CBOR;
 		};
+		B15D4D48BF09556DA660E90BE7C76D2A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD9F52E07CA8CCC9E5112A7D8C1CE821;
+			remoteInfo = AlertToast;
+		};
+		F839233EE8AAF89BF3E3835A8355E801 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98415E46B427BF9AA6DD4FBA6FA3AC2D;
+			remoteInfo = NabtoEdgeClientSwift;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00DA8F36F75D29FBB578AC784F790911 /* CBOR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CBOR-dummy.m"; sourceTree = "<group>"; };
+		00D198D2EC61FCD833729460AD012A25 /* CBOR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOR.swift; path = SwiftCBOR/CBOR.swift; sourceTree = "<group>"; };
+		0111F53DF51D64537B18F6514E0153F5 /* CBOR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CBOR.release.xcconfig; sourceTree = "<group>"; };
+		02A7D1BED1401064DEBF7359628BB88C /* CBOREncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOREncodable.swift; path = SwiftCBOR/CBOREncodable.swift; sourceTree = "<group>"; };
+		0370AD538FA99C8BC671618AD62C9870 /* NabtoEdgeClient.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = NabtoEdgeClient.xcframework; sourceTree = "<group>"; };
 		0DD05848B2FB82549F4EA363C0EDBA3A /* Pods-Nabto_HeatPumpApp_SwiftUI.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Nabto_HeatPumpApp_SwiftUI.modulemap"; sourceTree = "<group>"; };
 		107A945B2250444011DAB5CB7B792706 /* Pods-Nabto_HeatPumpApp_SwiftUI-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Nabto_HeatPumpApp_SwiftUI-frameworks.sh"; sourceTree = "<group>"; };
-		21FC8A8843507050980D0465FDEB3456 /* CBOR.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CBOR.release.xcconfig; sourceTree = "<group>"; };
-		26778BB0A5ED409B2BBC504069600EA2 /* CBORInputStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBORInputStream.swift; path = SwiftCBOR/CBORInputStream.swift; sourceTree = "<group>"; };
+		123C115BD6866C980809949CC37BD76B /* CBOR-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBOR-prefix.pch"; sourceTree = "<group>"; };
+		20E5E8A3F4357B8283E91E745C93A649 /* CBOREncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOREncoder.swift; path = SwiftCBOR/CBOREncoder.swift; sourceTree = "<group>"; };
+		2328CED4F679A28FDA130E035328CCE7 /* NabtoEdgeClientSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NabtoEdgeClientSwift.release.xcconfig; sourceTree = "<group>"; };
+		23B3F3DC86094B2EE275C93248C97753 /* SwiftCBOR.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftCBOR.h; path = SwiftCBOR/SwiftCBOR.h; sourceTree = "<group>"; };
 		2677A7F4776C182F60DF4D3ADCC2E437 /* Pods-Nabto_HeatPumpApp_SwiftUI */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Nabto_HeatPumpApp_SwiftUI"; path = Pods_Nabto_HeatPumpApp_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		439629C4809498D64D7BFCFD79A483E2 /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = SwiftCBOR/Util.swift; sourceTree = "<group>"; };
+		3C5E5C32C5E8713F51971E8918963145 /* BlurView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurView.swift; path = Sources/AlertToast/BlurView.swift; sourceTree = "<group>"; };
+		4ED939A5CB1758C051382C0FC8A3D2E9 /* AlertToast-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AlertToast-dummy.m"; sourceTree = "<group>"; };
+		4F1A27BD7A36779A2DF1BF77837D0D2B /* AlertToast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlertToast.release.xcconfig; sourceTree = "<group>"; };
 		5973430CB9B28FA4F1E90F5112C303AB /* Pods-Nabto_HeatPumpApp_SwiftUI-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nabto_HeatPumpApp_SwiftUI-Info.plist"; sourceTree = "<group>"; };
-		59C7EBF102B76ADB33FEFBAA2D9C6BAB /* SwiftCBOR.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SwiftCBOR.h; path = SwiftCBOR/SwiftCBOR.h; sourceTree = "<group>"; };
+		5AB050993F01BED77F7F0EFFBDB84C90 /* AlertToast.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AlertToast.modulemap; sourceTree = "<group>"; };
+		6A2109E36B22A67FB9170F46B8774565 /* CBOR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBOR-umbrella.h"; sourceTree = "<group>"; };
+		6D704CE5E8FBDF7AFFE69B28492C3D97 /* CBORInputStream.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBORInputStream.swift; path = SwiftCBOR/CBORInputStream.swift; sourceTree = "<group>"; };
 		70CBFC0A591F117FDB4BBA3EB6CAF73E /* Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		74B763EA25CFA6876E6DC52E89200A79 /* CBOR-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CBOR-Info.plist"; sourceTree = "<group>"; };
-		75B1975B46AEB9D998E7B46265F0D180 /* CBOREncoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOREncoder.swift; path = SwiftCBOR/CBOREncoder.swift; sourceTree = "<group>"; };
-		790355C075F114F303911668B03C2105 /* CBORDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBORDecoder.swift; path = SwiftCBOR/CBORDecoder.swift; sourceTree = "<group>"; };
+		80319A1E32A3D0336F60603323EB04D2 /* AlertToast-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AlertToast-Info.plist"; sourceTree = "<group>"; };
 		8191F6BC1B42470117CAF9A704D454F5 /* Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
-		8DD5573EE5B7F75512FAE67306EB2EF2 /* NabtoEdgeClientSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NabtoEdgeClientSwift.release.xcconfig; sourceTree = "<group>"; };
 		9435E66F9C9D319E9B4B57A85164A8E9 /* Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A0130F4078E66496952DBABE1430C35C /* CBOR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOR.swift; path = SwiftCBOR/CBOR.swift; sourceTree = "<group>"; };
-		A0726AFFEC2693FB594A5E3B07753A07 /* CBOR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CBOR.debug.xcconfig; sourceTree = "<group>"; };
+		953A4CC707DA7BA640F5C2097F046678 /* CBOR-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CBOR-dummy.m"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A3E78E4ED120BF64A23AF0EB2EFCCFD2 /* NabtoEdgeClientSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NabtoEdgeClientSwift.debug.xcconfig; sourceTree = "<group>"; };
+		A50F036BE0BFE618C67FA52B80377F3B /* AlertToast */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AlertToast; path = AlertToast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8922E048E06971F0D98F1E7AB347B63 /* NabtoEdgeClientSwift-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NabtoEdgeClientSwift-xcframeworks.sh"; sourceTree = "<group>"; };
 		AED95C768EE2C4592EA2524857E00EF1 /* Pods-Nabto_HeatPumpApp_SwiftUI-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Nabto_HeatPumpApp_SwiftUI-acknowledgements.markdown"; sourceTree = "<group>"; };
-		BCDB643C75FD987DD4DC93012F432B20 /* CBOR-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBOR-prefix.pch"; sourceTree = "<group>"; };
+		BE879883154C30A2C01D766FCED4568E /* CBOR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CBOR.modulemap; sourceTree = "<group>"; };
 		C789B26CFE42C604FFBAC811EE7988B3 /* Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m"; sourceTree = "<group>"; };
-		CD98A7D82D249C3DD8690017C7DA688B /* CBOR.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CBOR.modulemap; sourceTree = "<group>"; };
-		D279F1A8C8A684843F8E9A1826DE791A /* CBOR-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CBOR-umbrella.h"; sourceTree = "<group>"; };
-		D401C97BFF1B0438BCBB28FD623A8EAD /* NabtoEdgeClientSwift-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "NabtoEdgeClientSwift-xcframeworks.sh"; sourceTree = "<group>"; };
-		DCF51240B7A7575EFF856C9678973621 /* CBOR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBOR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA332CB238012D866F3B8E59E434BBEE /* AlertToast.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AlertToast.swift; path = Sources/AlertToast/AlertToast.swift; sourceTree = "<group>"; };
+		CC02D775A446825741B27FA6B5DDCB3A /* AlertToast-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertToast-prefix.pch"; sourceTree = "<group>"; };
+		D11B88A20FF9D68253296256B89E2964 /* CBOR-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CBOR-Info.plist"; sourceTree = "<group>"; };
+		D98000EA1E7C2EC82C5C33027C6B778C /* AlertToast.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AlertToast.debug.xcconfig; sourceTree = "<group>"; };
+		DCF51240B7A7575EFF856C9678973621 /* CBOR */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CBOR; path = CBOR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD8E508F3FEBA30BD77B3DD0C00DBF35 /* Pods-Nabto_HeatPumpApp_SwiftUI-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Nabto_HeatPumpApp_SwiftUI-acknowledgements.plist"; sourceTree = "<group>"; };
-		E83A2BB91DDDEB71712156FE5E1F1BAD /* CBOREncodable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBOREncodable.swift; path = SwiftCBOR/CBOREncodable.swift; sourceTree = "<group>"; };
-		F7BEB6C4DA497291AC08F58C836D478B /* NabtoEdgeClient.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.xcframework; path = NabtoEdgeClient.xcframework; sourceTree = "<group>"; };
-		FCE5D3E47EE45F7E6035409250DDA981 /* NabtoEdgeClientSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NabtoEdgeClientSwift.debug.xcconfig; sourceTree = "<group>"; };
+		E5867A5A6228B68A8E485829CD5830D5 /* CBOR.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CBOR.debug.xcconfig; sourceTree = "<group>"; };
+		E860EAFB99628A2CCB69EDC7CA71CCF2 /* Util.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Util.swift; path = SwiftCBOR/Util.swift; sourceTree = "<group>"; };
+		F1C336F6ED1CE9AF77D65C7B8F0F148E /* ActivityIndicator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicator.swift; path = Sources/AlertToast/ActivityIndicator.swift; sourceTree = "<group>"; };
+		F303CB8BBA2D89EEF6BAEB8AFC0FC6C2 /* AlertToast-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AlertToast-umbrella.h"; sourceTree = "<group>"; };
+		FB3D0CB37ED25A9F468CF13FA042BDE9 /* CBORDecoder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBORDecoder.swift; path = SwiftCBOR/CBORDecoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		347779031190EDC071A4F2E9073598F0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7E1FD0252DFA6033E7E08D5984D7B0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A01F824EE3FD574699CD5E7CE5B21744 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -96,38 +127,60 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DBB4CECD16523BDA0D278CCD5D64A936 /* Frameworks */ = {
+		FE4BB263E0D012E76B120A1D1BF9B092 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B95E26FD248F9CE482CBF2754F5B841 /* Foundation.framework in Frameworks */,
+				352CB338812CD38CA9A30D60DE09EDD9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		02853E8CD0192BC21A53F33A1CD02F18 /* NabtoEdgeClientSwift */ = {
+		15DEC5CC67DB5D9386D6DA8F1D1BFAEC /* CBOR */ = {
 			isa = PBXGroup;
 			children = (
-				040BDA666DE5C629AD7BF7D70F2F5229 /* Frameworks */,
-				C3B176CACE54E9915E9FEF197BA92DCE /* Support Files */,
+				00D198D2EC61FCD833729460AD012A25 /* CBOR.swift */,
+				FB3D0CB37ED25A9F468CF13FA042BDE9 /* CBORDecoder.swift */,
+				02A7D1BED1401064DEBF7359628BB88C /* CBOREncodable.swift */,
+				20E5E8A3F4357B8283E91E745C93A649 /* CBOREncoder.swift */,
+				6D704CE5E8FBDF7AFFE69B28492C3D97 /* CBORInputStream.swift */,
+				23B3F3DC86094B2EE275C93248C97753 /* SwiftCBOR.h */,
+				E860EAFB99628A2CCB69EDC7CA71CCF2 /* Util.swift */,
+				7C0B434CEDBE17906DFE6E69B9181F14 /* Support Files */,
 			);
-			path = NabtoEdgeClientSwift;
+			name = CBOR;
+			path = CBOR;
 			sourceTree = "<group>";
 		};
-		040BDA666DE5C629AD7BF7D70F2F5229 /* Frameworks */ = {
+		3BBA8798566F0BA3DE9F206BDDBFF7BC /* AlertToast */ = {
 			isa = PBXGroup;
 			children = (
-				F7BEB6C4DA497291AC08F58C836D478B /* NabtoEdgeClient.xcframework */,
+				F1C336F6ED1CE9AF77D65C7B8F0F148E /* ActivityIndicator.swift */,
+				CA332CB238012D866F3B8E59E434BBEE /* AlertToast.swift */,
+				3C5E5C32C5E8713F51971E8918963145 /* BlurView.swift */,
+				FA2461413C26AEB1394254BB486F1177 /* Support Files */,
 			);
-			name = Frameworks;
+			name = AlertToast;
+			path = AlertToast;
 			sourceTree = "<group>";
 		};
-		41DF0613A339BDB74135DD6D99EC703B /* Products */ = {
+		43E9A3A74ACDB7E1AF5097995E2AAF7E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DCF51240B7A7575EFF856C9678973621 /* CBOR.framework */,
+				3BBA8798566F0BA3DE9F206BDDBFF7BC /* AlertToast */,
+				15DEC5CC67DB5D9386D6DA8F1D1BFAEC /* CBOR */,
+				C2A20CBB67C8D4D65396C0CB8504E253 /* NabtoEdgeClientSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		513A56BBF6D97789CAF8A2CF55E0B3FD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A50F036BE0BFE618C67FA52B80377F3B /* AlertToast */,
+				DCF51240B7A7575EFF856C9678973621 /* CBOR */,
 				2677A7F4776C182F60DF4D3ADCC2E437 /* Pods-Nabto_HeatPumpApp_SwiftUI */,
 			);
 			name = Products;
@@ -141,45 +194,29 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6A2A5F9CC81DCB5CD77CC99D6DEF2449 /* CBOR */ = {
+		7C0B434CEDBE17906DFE6E69B9181F14 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A0130F4078E66496952DBABE1430C35C /* CBOR.swift */,
-				790355C075F114F303911668B03C2105 /* CBORDecoder.swift */,
-				E83A2BB91DDDEB71712156FE5E1F1BAD /* CBOREncodable.swift */,
-				75B1975B46AEB9D998E7B46265F0D180 /* CBOREncoder.swift */,
-				26778BB0A5ED409B2BBC504069600EA2 /* CBORInputStream.swift */,
-				59C7EBF102B76ADB33FEFBAA2D9C6BAB /* SwiftCBOR.h */,
-				439629C4809498D64D7BFCFD79A483E2 /* Util.swift */,
-				85BC8B4296F13B8FC8C9F4A611DACCCB /* Support Files */,
-			);
-			path = CBOR;
-			sourceTree = "<group>";
-		};
-		85BC8B4296F13B8FC8C9F4A611DACCCB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				CD98A7D82D249C3DD8690017C7DA688B /* CBOR.modulemap */,
-				00DA8F36F75D29FBB578AC784F790911 /* CBOR-dummy.m */,
-				74B763EA25CFA6876E6DC52E89200A79 /* CBOR-Info.plist */,
-				BCDB643C75FD987DD4DC93012F432B20 /* CBOR-prefix.pch */,
-				D279F1A8C8A684843F8E9A1826DE791A /* CBOR-umbrella.h */,
-				A0726AFFEC2693FB594A5E3B07753A07 /* CBOR.debug.xcconfig */,
-				21FC8A8843507050980D0465FDEB3456 /* CBOR.release.xcconfig */,
+				BE879883154C30A2C01D766FCED4568E /* CBOR.modulemap */,
+				953A4CC707DA7BA640F5C2097F046678 /* CBOR-dummy.m */,
+				D11B88A20FF9D68253296256B89E2964 /* CBOR-Info.plist */,
+				123C115BD6866C980809949CC37BD76B /* CBOR-prefix.pch */,
+				6A2109E36B22A67FB9170F46B8774565 /* CBOR-umbrella.h */,
+				E5867A5A6228B68A8E485829CD5830D5 /* CBOR.debug.xcconfig */,
+				0111F53DF51D64537B18F6514E0153F5 /* CBOR.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/CBOR";
 			sourceTree = "<group>";
 		};
-		C3B176CACE54E9915E9FEF197BA92DCE /* Support Files */ = {
+		C2A20CBB67C8D4D65396C0CB8504E253 /* NabtoEdgeClientSwift */ = {
 			isa = PBXGroup;
 			children = (
-				D401C97BFF1B0438BCBB28FD623A8EAD /* NabtoEdgeClientSwift-xcframeworks.sh */,
-				FCE5D3E47EE45F7E6035409250DDA981 /* NabtoEdgeClientSwift.debug.xcconfig */,
-				8DD5573EE5B7F75512FAE67306EB2EF2 /* NabtoEdgeClientSwift.release.xcconfig */,
+				E637432AB32A3FAC5C58AD6D67189AAB /* Frameworks */,
+				ECCE7672E075D0D8ADDA9940C97BDBA1 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/NabtoEdgeClientSwift";
+			name = NabtoEdgeClientSwift;
+			path = NabtoEdgeClientSwift;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -187,8 +224,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				EE89A2CF45D4524536FED9E6F7384623 /* Pods */,
-				41DF0613A339BDB74135DD6D99EC703B /* Products */,
+				43E9A3A74ACDB7E1AF5097995E2AAF7E /* Pods */,
+				513A56BBF6D97789CAF8A2CF55E0B3FD /* Products */,
 				DB79299BADC5509AE91BC02127B31E24 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -209,13 +246,23 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		EE89A2CF45D4524536FED9E6F7384623 /* Pods */ = {
+		E637432AB32A3FAC5C58AD6D67189AAB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A2A5F9CC81DCB5CD77CC99D6DEF2449 /* CBOR */,
-				02853E8CD0192BC21A53F33A1CD02F18 /* NabtoEdgeClientSwift */,
+				0370AD538FA99C8BC671618AD62C9870 /* NabtoEdgeClient.xcframework */,
 			);
-			name = Pods;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ECCE7672E075D0D8ADDA9940C97BDBA1 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A8922E048E06971F0D98F1E7AB347B63 /* NabtoEdgeClientSwift-xcframeworks.sh */,
+				A3E78E4ED120BF64A23AF0EB2EFCCFD2 /* NabtoEdgeClientSwift.debug.xcconfig */,
+				2328CED4F679A28FDA130E035328CCE7 /* NabtoEdgeClientSwift.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/NabtoEdgeClientSwift";
 			sourceTree = "<group>";
 		};
 		F838D4093EA1833D711C23EAED982C3A /* Pods-Nabto_HeatPumpApp_SwiftUI */ = {
@@ -235,9 +282,32 @@
 			path = "Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI";
 			sourceTree = "<group>";
 		};
+		FA2461413C26AEB1394254BB486F1177 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5AB050993F01BED77F7F0EFFBDB84C90 /* AlertToast.modulemap */,
+				4ED939A5CB1758C051382C0FC8A3D2E9 /* AlertToast-dummy.m */,
+				80319A1E32A3D0336F60603323EB04D2 /* AlertToast-Info.plist */,
+				CC02D775A446825741B27FA6B5DDCB3A /* AlertToast-prefix.pch */,
+				F303CB8BBA2D89EEF6BAEB8AFC0FC6C2 /* AlertToast-umbrella.h */,
+				D98000EA1E7C2EC82C5C33027C6B778C /* AlertToast.debug.xcconfig */,
+				4F1A27BD7A36779A2DF1BF77837D0D2B /* AlertToast.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AlertToast";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		44A84C91FAC6DAD40F1A43DEF8DDCA81 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6EA08F424ACCD3B0D6222BEF90912961 /* AlertToast-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7C15642E3EB55D69F526BB125B73FD34 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,11 +317,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F3CD827F37E356EF2E65B859B7249A02 /* Headers */ = {
+		FAE634B9A983C6ADE36C1689D6044163 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				89A19BE0CC4B072F71D2155CB98883C5 /* Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h in Headers */,
+				814DCB33C114C6E6B9D1645C15056AAD /* Pods-Nabto_HeatPumpApp_SwiftUI-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,22 +330,41 @@
 /* Begin PBXNativeTarget section */
 		39FE7D4D72E4126FE40B173442A17C8A /* Pods-Nabto_HeatPumpApp_SwiftUI */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1F958632257C1FD23A32D06B04BC5330 /* Build configuration list for PBXNativeTarget "Pods-Nabto_HeatPumpApp_SwiftUI" */;
+			buildConfigurationList = 082407B6E37C0473404B5B8779548469 /* Build configuration list for PBXNativeTarget "Pods-Nabto_HeatPumpApp_SwiftUI" */;
 			buildPhases = (
-				F3CD827F37E356EF2E65B859B7249A02 /* Headers */,
-				085BA3770E2028FA7DB57C437E20DA42 /* Sources */,
-				DBB4CECD16523BDA0D278CCD5D64A936 /* Frameworks */,
-				89D7B17D4C94B50490C4720F444AB82F /* Resources */,
+				FAE634B9A983C6ADE36C1689D6044163 /* Headers */,
+				3C4EFCC31F95C6B0FB471453425A08BF /* Sources */,
+				FE4BB263E0D012E76B120A1D1BF9B092 /* Frameworks */,
+				01C63A55DBB36138FE68ECD806B1F7F5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DDDACB9B89CFDB362386705B85698417 /* PBXTargetDependency */,
-				BAFF3C0A1778E0C6C8447107AF4AEB88 /* PBXTargetDependency */,
+				F5B3E79D28F77E776CBB2793F7A1D5E1 /* PBXTargetDependency */,
+				E3BA300973E6EDEF31648CDFD2429914 /* PBXTargetDependency */,
+				180581CD6F55C576A5B6EA946542DE84 /* PBXTargetDependency */,
 			);
 			name = "Pods-Nabto_HeatPumpApp_SwiftUI";
 			productName = Pods_Nabto_HeatPumpApp_SwiftUI;
 			productReference = 2677A7F4776C182F60DF4D3ADCC2E437 /* Pods-Nabto_HeatPumpApp_SwiftUI */;
+			productType = "com.apple.product-type.framework";
+		};
+		BD9F52E07CA8CCC9E5112A7D8C1CE821 /* AlertToast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 058CF4B13CD220E4F99FC2BAEA8B57E3 /* Build configuration list for PBXNativeTarget "AlertToast" */;
+			buildPhases = (
+				44A84C91FAC6DAD40F1A43DEF8DDCA81 /* Headers */,
+				E433AAB9933A759630771F55C9A60EBF /* Sources */,
+				347779031190EDC071A4F2E9073598F0 /* Frameworks */,
+				59FC49F4186BE3B64D14966824FEF367 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AlertToast;
+			productName = AlertToast;
+			productReference = A50F036BE0BFE618C67FA52B80377F3B /* AlertToast */;
 			productType = "com.apple.product-type.framework";
 		};
 		D56183DF99A8634C6B1FFDA6DF7C22FF /* CBOR */ = {
@@ -293,7 +382,7 @@
 			);
 			name = CBOR;
 			productName = CBOR;
-			productReference = DCF51240B7A7575EFF856C9678973621 /* CBOR.framework */;
+			productReference = DCF51240B7A7575EFF856C9678973621 /* CBOR */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -303,12 +392,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1310;
-				TargetAttributes = {
-					D56183DF99A8634C6B1FFDA6DF7C22FF = {
-						LastSwiftMigration = 1310;
-					};
-				};
+				LastUpgradeCheck = 1240;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -319,10 +403,11 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 41DF0613A339BDB74135DD6D99EC703B /* Products */;
+			productRefGroup = 513A56BBF6D97789CAF8A2CF55E0B3FD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				BD9F52E07CA8CCC9E5112A7D8C1CE821 /* AlertToast */,
 				D56183DF99A8634C6B1FFDA6DF7C22FF /* CBOR */,
 				98415E46B427BF9AA6DD4FBA6FA3AC2D /* NabtoEdgeClientSwift */,
 				39FE7D4D72E4126FE40B173442A17C8A /* Pods-Nabto_HeatPumpApp_SwiftUI */,
@@ -331,14 +416,21 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		75704DFFD90C213F1256127E0FE5B70E /* Resources */ = {
+		01C63A55DBB36138FE68ECD806B1F7F5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89D7B17D4C94B50490C4720F444AB82F /* Resources */ = {
+		59FC49F4186BE3B64D14966824FEF367 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		75704DFFD90C213F1256127E0FE5B70E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,11 +460,11 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		085BA3770E2028FA7DB57C437E20DA42 /* Sources */ = {
+		3C4EFCC31F95C6B0FB471453425A08BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D674F465541F7E5D9F2056935E93B60 /* Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m in Sources */,
+				0EFF45C80C068E5C520FF6573CB6C414 /* Pods-Nabto_HeatPumpApp_SwiftUI-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,27 +482,80 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E433AAB9933A759630771F55C9A60EBF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAE75918F0786809E98E99512119DF8D /* ActivityIndicator.swift in Sources */,
+				89068BEF39B046B28FD6DA14201044DE /* AlertToast.swift in Sources */,
+				ABCC96A3F5A122791DAB8A1CFA9BD50D /* AlertToast-dummy.m in Sources */,
+				481F3BE2185022F134DFD932BBD79A40 /* BlurView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BAFF3C0A1778E0C6C8447107AF4AEB88 /* PBXTargetDependency */ = {
+		180581CD6F55C576A5B6EA946542DE84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = NabtoEdgeClientSwift;
 			target = 98415E46B427BF9AA6DD4FBA6FA3AC2D /* NabtoEdgeClientSwift */;
-			targetProxy = D52421799547AB8F3373CDCE220DB157 /* PBXContainerItemProxy */;
+			targetProxy = F839233EE8AAF89BF3E3835A8355E801 /* PBXContainerItemProxy */;
 		};
-		DDDACB9B89CFDB362386705B85698417 /* PBXTargetDependency */ = {
+		E3BA300973E6EDEF31648CDFD2429914 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = CBOR;
 			target = D56183DF99A8634C6B1FFDA6DF7C22FF /* CBOR */;
-			targetProxy = FFB361AD81AC875460CE9C39852283B2 /* PBXContainerItemProxy */;
+			targetProxy = 3F029596ADA8A3DCAB25F99C53DB63FE /* PBXContainerItemProxy */;
+		};
+		F5B3E79D28F77E776CBB2793F7A1D5E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AlertToast;
+			target = BD9F52E07CA8CCC9E5112A7D8C1CE821 /* AlertToast */;
+			targetProxy = B15D4D48BF09556DA660E90BE7C76D2A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1699C1732B9B9E6994A98AB1C8C6C295 /* Release */ = {
+		048AFB9BE277D96ECBD14AF2F4DFDCB9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 70CBFC0A591F117FDB4BBA3EB6CAF73E /* Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig */;
+			baseConfigurationReference = 4F1A27BD7A36779A2DF1BF77837D0D2B /* AlertToast.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AlertToast/AlertToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlertToast/AlertToast-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AlertToast/AlertToast.modulemap";
+				PRODUCT_MODULE_NAME = AlertToast;
+				PRODUCT_NAME = AlertToast;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3C68B3E2D1AFBDC81F0FA7494A6B0EC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8191F6BC1B42470117CAF9A704D454F5 /* Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -424,7 +569,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI/Pods-Nabto_HeatPumpApp_SwiftUI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -440,13 +585,81 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		7A1397BFFFFA2C8E82E8AF5D4654C3D4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0111F53DF51D64537B18F6514E0153F5 /* CBOR.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CBOR/CBOR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CBOR/CBOR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CBOR/CBOR.modulemap";
+				PRODUCT_MODULE_NAME = CBOR;
+				PRODUCT_NAME = CBOR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+		896E22C8CDCA77F1848ED77984A52E86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5867A5A6228B68A8E485829CD5830D5 /* CBOR.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CBOR/CBOR-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CBOR/CBOR-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/CBOR/CBOR.modulemap";
+				PRODUCT_MODULE_NAME = CBOR;
+				PRODUCT_NAME = CBOR;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8DE5143C03248BB6CD542DE3963D6F3A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -499,7 +712,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -512,7 +725,24 @@
 			};
 			name = Debug;
 		};
-		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+		9507627395AE034A519BBD4BD410E4D6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3E78E4ED120BF64A23AF0EB2EFCCFD2 /* NabtoEdgeClientSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9E406C6AAF85E580207CD97B0044DEAB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -562,7 +792,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -574,9 +804,9 @@
 			};
 			name = Release;
 		};
-		6F146079A322968CAD426EF25D53CCBF /* Debug */ = {
+		B71A6D7C8538CDB1318765D1A86B27CC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8191F6BC1B42470117CAF9A704D454F5 /* Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig */;
+			baseConfigurationReference = 70CBFC0A591F117FDB4BBA3EB6CAF73E /* Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -590,7 +820,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI/Pods-Nabto_HeatPumpApp_SwiftUI-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,50 +836,17 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7A1397BFFFFA2C8E82E8AF5D4654C3D4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 21FC8A8843507050980D0465FDEB3456 /* CBOR.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CBOR/CBOR-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CBOR/CBOR-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/CBOR/CBOR.modulemap";
-				PRODUCT_MODULE_NAME = CBOR;
-				PRODUCT_NAME = CBOR;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		896E22C8CDCA77F1848ED77984A52E86 /* Debug */ = {
+		B7C854466008CDE402EC68A4D7263738 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A0726AFFEC2693FB594A5E3B07753A07 /* CBOR.debug.xcconfig */;
+			baseConfigurationReference = D98000EA1E7C2EC82C5C33027C6B778C /* AlertToast.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -658,53 +855,36 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/CBOR/CBOR-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/CBOR/CBOR-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AlertToast/AlertToast-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AlertToast/AlertToast-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/CBOR/CBOR.modulemap";
-				PRODUCT_MODULE_NAME = CBOR;
-				PRODUCT_NAME = CBOR;
+				MODULEMAP_FILE = "Target Support Files/AlertToast/AlertToast.modulemap";
+				PRODUCT_MODULE_NAME = AlertToast;
+				PRODUCT_NAME = AlertToast;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		9507627395AE034A519BBD4BD410E4D6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCE5D3E47EE45F7E6035409250DDA981 /* NabtoEdgeClientSwift.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		B90EE3E3B00CD417D1CE017CE56F1EF8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8DD5573EE5B7F75512FAE67306EB2EF2 /* NabtoEdgeClientSwift.release.xcconfig */;
+			baseConfigurationReference = 2328CED4F679A28FDA130E035328CCE7 /* NabtoEdgeClientSwift.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -718,11 +898,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1F958632257C1FD23A32D06B04BC5330 /* Build configuration list for PBXNativeTarget "Pods-Nabto_HeatPumpApp_SwiftUI" */ = {
+		058CF4B13CD220E4F99FC2BAEA8B57E3 /* Build configuration list for PBXNativeTarget "AlertToast" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6F146079A322968CAD426EF25D53CCBF /* Debug */,
-				1699C1732B9B9E6994A98AB1C8C6C295 /* Release */,
+				B7C854466008CDE402EC68A4D7263738 /* Debug */,
+				048AFB9BE277D96ECBD14AF2F4DFDCB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		082407B6E37C0473404B5B8779548469 /* Build configuration list for PBXNativeTarget "Pods-Nabto_HeatPumpApp_SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3C68B3E2D1AFBDC81F0FA7494A6B0EC4 /* Debug */,
+				B71A6D7C8538CDB1318765D1A86B27CC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -730,8 +919,8 @@
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
-				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+				8DE5143C03248BB6CD542DE3963D6F3A /* Debug */,
+				9E406C6AAF85E580207CD97B0044DEAB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
