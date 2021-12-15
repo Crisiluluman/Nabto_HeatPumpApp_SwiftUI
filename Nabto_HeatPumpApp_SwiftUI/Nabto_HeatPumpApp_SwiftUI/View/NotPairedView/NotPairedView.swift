@@ -10,7 +10,7 @@ import SwiftUI
 struct NotPairedView: View {
     
     @State var selection: Int? = nil
-
+        
     
     var body: some View {
         
@@ -44,11 +44,11 @@ struct NotPairedView: View {
                             .foregroundColor(.white)
                     }
                     
-                }.frame(width: 300.0)                            .background(Color("NabtoOrange"))
-                     .cornerRadius(5)
-
-
-
+                }.frame(width: 300.0).background(Color("NabtoOrange"))
+                    .cornerRadius(5)
+                
+                
+                
                 
                 Spacer()
                 
@@ -80,15 +80,10 @@ struct NotPairedView: View {
 }
 
 //Preview testing stuff
+
+/*
 struct NotPairedView_Previews: PreviewProvider {
-    static var previews: some View {
-        Group {
-            NotPairedView()
-                .previewDevice("iPhone 13 mini")
-            NotPairedView()
-                .previewDevice("iPad Air (4th generation)")
-            NotPairedView()
-                .previewDevice("iPhone 8")
-        }
-    }
+   
+    
 }
+*/

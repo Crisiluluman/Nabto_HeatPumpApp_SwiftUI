@@ -6,27 +6,36 @@
 //
 
 import Foundation
+import SwiftUI
 
-struct User {
+struct User: Codable {
     
     var id : UUID // Probably used for the list, so it can identify each element uniqely
     
+    var role: String
     var username: String
     var sct: String?
+    
     var pk: String?
+    var devices: [Device]
 
     
-    init(username: String, pk: String?=nil, sct: String?=nil){
+    init(role: String, username: String, pk: String?=nil, sct: String?=nil){
         id = UUID()
+        self.role = role
         self.username = username
         self.pk = pk
         self.sct = sct
+        
+        devices = []
+        
     }
     
     func asJson() -> String {
         let sctElement = sct != nil ? "\"ServerConnectToken\": \"\(sct!)\",\n" : ""
         return """
                    {\n
+                   \"Admin\": \"\(self.role)\",\n
                    \"Username\": \"\(self.username)\",\n
                    \(sctElement)
                    \n}

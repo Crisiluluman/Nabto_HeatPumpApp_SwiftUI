@@ -10,24 +10,31 @@ import Foundation
 
 // : Identifiable For unique ID's using "var id = UUID()"
 
-struct Device : Identifiable {
+struct Device : Identifiable, Codable {
     var id : UUID // Probably used for the list, so it can identify each element uniqely
     
     var productId: String
     var deviceId: String
     var readableName: String?
+    var deviceType: String?
+    
+    var heatPumpState: HeatPump
+
     
     var url: String
     var key: String
     var sct: String?
 
     
-    init(productId: String, deviceId: String, readableName: String?=nil, sct: String?=nil){
+    init(productId: String, deviceId: String, readableName: String?=nil, deviceType: String?=nil, sct: String?=nil){
         id = UUID()
         self.productId = productId
         self.deviceId = deviceId
-        self.readableName = "No name has been set"
+        self.readableName = readableName
+        self.deviceType = deviceType
         
+        heatPumpState = HeatPump()
+
         url = "https://pr-w34yvehn.devices.nabto.net" //pr-w34yvehn : Products
         key = "sk-e5129ab2faf1254dc55506cfc7743eab" //Another Test App'en i NabtoCloudConsole
         self.sct = sct
@@ -48,3 +55,6 @@ struct Device : Identifiable {
     }
     
 }
+
+
+

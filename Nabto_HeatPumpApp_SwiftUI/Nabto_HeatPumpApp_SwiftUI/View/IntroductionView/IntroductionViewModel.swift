@@ -9,10 +9,20 @@ import Foundation
 
 final class IntroductionViewModel {
     
-    private var nabtoAccess : NabtoUserCoap = NabtoUserCoap()
+    private var userAccess : NabtoUserCoap = NabtoUserCoap()
     
-     func createUser(username: String){
-         nabtoAccess.createUser(username: username)
+     func createAdmin(username: String){
+         userAccess.createAdmin(username: username)
     }
+    
+    func getUser() -> Bool{
+        if (userAccess.user == nil){
+            return true
+        }
+        else {
+            return false
+        }
+    }
+
     
 }

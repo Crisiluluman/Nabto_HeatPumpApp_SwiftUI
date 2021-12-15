@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9D08B8F527696FA20046FA28 /* TestCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8F427696FA20046FA28 /* TestCodable.swift */; };
+		9D08B8F7276996520046FA28 /* PairedDevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8F6276996520046FA28 /* PairedDevicesViewModel.swift */; };
+		9D08B8FA276998E20046FA28 /* DeviceMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8F9276998E20046FA28 /* DeviceMainView.swift */; };
+		9D08B8FC2769A9A00046FA28 /* DeviceMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8FB2769A9A00046FA28 /* DeviceMainViewModel.swift */; };
 		9D0F0164275D0DB100B8C737 /* NabtoAccessConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F0163275D0DB100B8C737 /* NabtoAccessConnect.swift */; };
 		9D0F0167275D171600B8C737 /* IntroductionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F0166275D171600B8C737 /* IntroductionViewModel.swift */; };
 		9D0F0169275D183E00B8C737 /* DiscoverDevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F0168275D183E00B8C737 /* DiscoverDevicesViewModel.swift */; };
@@ -14,6 +18,10 @@
 		9D0F0170275E53D500B8C737 /* MainToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F016F275E53D500B8C737 /* MainToolbar.swift */; };
 		9D0F0173275E8D1600B8C737 /* HomeToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F0172275E8D1600B8C737 /* HomeToolbar.swift */; };
 		9D0F0175275FB7B100B8C737 /* PairNewDeviceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F0174275FB7B100B8C737 /* PairNewDeviceViewModel.swift */; };
+		9D0F017727664B4100B8C737 /* HeatPumpState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F017627664B4100B8C737 /* HeatPumpState.swift */; };
+		9D0F017D27664F6B00B8C737 /* HeatPumpStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F017C27664F6B00B8C737 /* HeatPumpStateView.swift */; };
+		9D0F017F276650E800B8C737 /* HeatPumpStateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F017E276650E800B8C737 /* HeatPumpStateViewModel.swift */; };
+		9D0F0181276655DE00B8C737 /* HeatPump.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0F0180276655DE00B8C737 /* HeatPump.swift */; };
 		9D2DB69C2757C41400AC9087 /* Nabto_HeatPumpApp_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB69B2757C41400AC9087 /* Nabto_HeatPumpApp_SwiftUIApp.swift */; };
 		9D2DB6A02757C41500AC9087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB69F2757C41500AC9087 /* Assets.xcassets */; };
 		9D2DB6A32757C41500AC9087 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB6A22757C41500AC9087 /* Preview Assets.xcassets */; };
@@ -35,6 +43,10 @@
 		118C67B5ACB93F8199135A36 /* Pods_Nabto_HeatPumpApp_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nabto_HeatPumpApp_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B158927E575006BB76457FB /* Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI/Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		67BDEC21F16786BFED5766E9 /* Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI/Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
+		9D08B8F427696FA20046FA28 /* TestCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodable.swift; sourceTree = "<group>"; };
+		9D08B8F6276996520046FA28 /* PairedDevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedDevicesViewModel.swift; sourceTree = "<group>"; };
+		9D08B8F9276998E20046FA28 /* DeviceMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMainView.swift; sourceTree = "<group>"; };
+		9D08B8FB2769A9A00046FA28 /* DeviceMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMainViewModel.swift; sourceTree = "<group>"; };
 		9D0F0163275D0DB100B8C737 /* NabtoAccessConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NabtoAccessConnect.swift; sourceTree = "<group>"; };
 		9D0F0166275D171600B8C737 /* IntroductionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroductionViewModel.swift; sourceTree = "<group>"; };
 		9D0F0168275D183E00B8C737 /* DiscoverDevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverDevicesViewModel.swift; sourceTree = "<group>"; };
@@ -42,6 +54,10 @@
 		9D0F016F275E53D500B8C737 /* MainToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainToolbar.swift; sourceTree = "<group>"; };
 		9D0F0172275E8D1600B8C737 /* HomeToolbar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeToolbar.swift; sourceTree = "<group>"; };
 		9D0F0174275FB7B100B8C737 /* PairNewDeviceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairNewDeviceViewModel.swift; sourceTree = "<group>"; };
+		9D0F017627664B4100B8C737 /* HeatPumpState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatPumpState.swift; sourceTree = "<group>"; };
+		9D0F017C27664F6B00B8C737 /* HeatPumpStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatPumpStateView.swift; sourceTree = "<group>"; };
+		9D0F017E276650E800B8C737 /* HeatPumpStateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatPumpStateViewModel.swift; sourceTree = "<group>"; };
+		9D0F0180276655DE00B8C737 /* HeatPump.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeatPump.swift; sourceTree = "<group>"; };
 		9D2DB6982757C41400AC9087 /* Nabto_HeatPumpApp_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nabto_HeatPumpApp_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D2DB69B2757C41400AC9087 /* Nabto_HeatPumpApp_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nabto_HeatPumpApp_SwiftUIApp.swift; sourceTree = "<group>"; };
 		9D2DB69F2757C41500AC9087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -88,6 +104,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9D08B8F8276998D50046FA28 /* DeviceMainView */ = {
+			isa = PBXGroup;
+			children = (
+				9D08B8F9276998E20046FA28 /* DeviceMainView.swift */,
+				9D08B8FB2769A9A00046FA28 /* DeviceMainViewModel.swift */,
+			);
+			path = DeviceMainView;
+			sourceTree = "<group>";
+		};
 		9D0F0165275D0FCE00B8C737 /* NabtoConnectionSetup */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +136,23 @@
 				9D0F0172275E8D1600B8C737 /* HomeToolbar.swift */,
 			);
 			path = Toolbars;
+			sourceTree = "<group>";
+		};
+		9D0F017827664B4900B8C737 /* HeatPump */ = {
+			isa = PBXGroup;
+			children = (
+				9D0F017627664B4100B8C737 /* HeatPumpState.swift */,
+			);
+			path = HeatPump;
+			sourceTree = "<group>";
+		};
+		9D0F017B27664F5700B8C737 /* HeatPumpStateView */ = {
+			isa = PBXGroup;
+			children = (
+				9D0F017C27664F6B00B8C737 /* HeatPumpStateView.swift */,
+				9D0F017E276650E800B8C737 /* HeatPumpStateViewModel.swift */,
+			);
+			path = HeatPumpStateView;
 			sourceTree = "<group>";
 		};
 		9D2DB68F2757C41400AC9087 = {
@@ -137,7 +179,6 @@
 				9D2DB6AC2757D8BC00AC9087 /* Models */,
 				9D2DB6AA2757D8BC00AC9087 /* NabtoAccessFunctions */,
 				9D2DB6AE2757D8BD00AC9087 /* View */,
-				9D2DB6A92757D8BC00AC9087 /* ViewModels */,
 				9D2DB69B2757C41400AC9087 /* Nabto_HeatPumpApp_SwiftUIApp.swift */,
 				9D2DB69F2757C41500AC9087 /* Assets.xcassets */,
 				9D2DB6A12757C41500AC9087 /* Preview Content */,
@@ -153,16 +194,10 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9D2DB6A92757D8BC00AC9087 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
-			sourceTree = "<group>";
-		};
 		9D2DB6AA2757D8BC00AC9087 /* NabtoAccessFunctions */ = {
 			isa = PBXGroup;
 			children = (
+				9D0F017827664B4900B8C737 /* HeatPump */,
 				9D0F016A275D18FC00B8C737 /* MdnsScanner */,
 				9D0F0165275D0FCE00B8C737 /* NabtoConnectionSetup */,
 				9D2DB6AB2757D8BC00AC9087 /* NabtoDeviceCoap.swift */,
@@ -176,6 +211,8 @@
 			children = (
 				9D2DB6AD2757D8BC00AC9087 /* Device.swift */,
 				9D4FB2A5275A10100025104C /* User.swift */,
+				9D0F0180276655DE00B8C737 /* HeatPump.swift */,
+				9D08B8F427696FA20046FA28 /* TestCodable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -183,10 +220,12 @@
 		9D2DB6AE2757D8BD00AC9087 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D08B8F8276998D50046FA28 /* DeviceMainView */,
+				9D0F017B27664F5700B8C737 /* HeatPumpStateView */,
 				9D0F0171275E8CDD00B8C737 /* Toolbars */,
 				9D2DB6AF2757D8BD00AC9087 /* IntroductionView */,
 				9D2DB6B12757D8BD00AC9087 /* PairNewDeviceView */,
-				9D2DB6B32757D8BD00AC9087 /* AvailableDevicesView */,
+				9D2DB6B32757D8BD00AC9087 /* DiscoverDevicesView */,
 				9D2DB6B52757D8BD00AC9087 /* NotPairedView */,
 				9D2DB6B72757D8BD00AC9087 /* PairedDevicesView */,
 				9D2DB6B92757D8BD00AC9087 /* SplashScreenView */,
@@ -212,13 +251,13 @@
 			path = PairNewDeviceView;
 			sourceTree = "<group>";
 		};
-		9D2DB6B32757D8BD00AC9087 /* AvailableDevicesView */ = {
+		9D2DB6B32757D8BD00AC9087 /* DiscoverDevicesView */ = {
 			isa = PBXGroup;
 			children = (
 				9D2DB6B42757D8BD00AC9087 /* DiscoverDevicesView.swift */,
 				9D0F0168275D183E00B8C737 /* DiscoverDevicesViewModel.swift */,
 			);
-			path = AvailableDevicesView;
+			path = DiscoverDevicesView;
 			sourceTree = "<group>";
 		};
 		9D2DB6B52757D8BD00AC9087 /* NotPairedView */ = {
@@ -233,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				9D2DB6B82757D8BD00AC9087 /* PairedDevicesView.swift */,
+				9D08B8F6276996520046FA28 /* PairedDevicesViewModel.swift */,
 			);
 			path = PairedDevicesView;
 			sourceTree = "<group>";
@@ -367,14 +407,22 @@
 				9D2DB6BD2757D8BD00AC9087 /* Device.swift in Sources */,
 				9D2DB6C32757D8BD00AC9087 /* SplashScreenView.swift in Sources */,
 				9D2DB69C2757C41400AC9087 /* Nabto_HeatPumpApp_SwiftUIApp.swift in Sources */,
+				9D0F017D27664F6B00B8C737 /* HeatPumpStateView.swift in Sources */,
 				9D2DB6BC2757D8BD00AC9087 /* NabtoDeviceCoap.swift in Sources */,
+				9D08B8FA276998E20046FA28 /* DeviceMainView.swift in Sources */,
 				9D0F0169275D183E00B8C737 /* DiscoverDevicesViewModel.swift in Sources */,
+				9D0F0181276655DE00B8C737 /* HeatPump.swift in Sources */,
+				9D08B8FC2769A9A00046FA28 /* DeviceMainViewModel.swift in Sources */,
+				9D0F017727664B4100B8C737 /* HeatPumpState.swift in Sources */,
 				9D2DB6BF2757D8BD00AC9087 /* PairNewDeviceView.swift in Sources */,
 				9D4FB2A8275D08AE0025104C /* NabtoUserCoap.swift in Sources */,
+				9D0F017F276650E800B8C737 /* HeatPumpStateViewModel.swift in Sources */,
 				9D0F0164275D0DB100B8C737 /* NabtoAccessConnect.swift in Sources */,
 				9D0F0170275E53D500B8C737 /* MainToolbar.swift in Sources */,
 				9D2DB6C22757D8BD00AC9087 /* PairedDevicesView.swift in Sources */,
 				9D0F0175275FB7B100B8C737 /* PairNewDeviceViewModel.swift in Sources */,
+				9D08B8F527696FA20046FA28 /* TestCodable.swift in Sources */,
+				9D08B8F7276996520046FA28 /* PairedDevicesViewModel.swift in Sources */,
 				9D2DB6BE2757D8BD00AC9087 /* IntroductionView.swift in Sources */,
 				9D0F0167275D171600B8C737 /* IntroductionViewModel.swift in Sources */,
 				9D4FB2A6275A10100025104C /* User.swift in Sources */,

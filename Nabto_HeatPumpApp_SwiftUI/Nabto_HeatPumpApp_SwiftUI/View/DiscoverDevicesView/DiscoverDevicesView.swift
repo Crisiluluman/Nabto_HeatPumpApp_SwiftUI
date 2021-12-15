@@ -14,7 +14,7 @@ private var mdnsResults : [MdnsResult] = []
 struct DiscoverDevicesView: View {
     
     @ObservedObject var mdnsReciever: MdnsRecieve = MdnsRecieve()
-    @State var isTapped = false
+    @State private var isTapped = false
     
     private var scanner = client.createMdnsScanner()
     
@@ -90,6 +90,8 @@ struct DiscoverDevicesView: View {
                                     
                                     Text("ProductID:  \(device.productId)")
                                     Text("DeviceID:  \(device.deviceId )")
+                                    Text("Type:  \(String(describing: device.deviceType))")
+
                                     
                                 }
                             }.onTapGesture {
@@ -122,7 +124,21 @@ struct DiscoverDevicesView: View {
                 let resultProductId : String = result.productId
                 let resultDeviceId : String = result.deviceId
                 
-                let device: Device = Device(productId: resultProductId, deviceId: resultDeviceId)
+                
+                let txt = result.txtItems.description
+                let txtArr = txt.components(separatedBy: "," )
+                var txt1 = txtArr[0]
+                
+                txt1 = (txt1.components(separatedBy: NSCharacterSet.decimalDigits) as NSArray).componentsJoined(by: "")
+                let wordToRemove = "deviceid productid"
+                
+                if let range = txt1.range(of: wordToRemove) {
+                    txt1.removeSubrange(range)
+                }
+                
+                let device: Device = Device(productId: resultProductId, deviceId: resultDeviceId, deviceType: txt1)
+
+                
                 
                 self.discoveredDevices.append(device)
                 

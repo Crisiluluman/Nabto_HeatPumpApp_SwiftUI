@@ -13,12 +13,14 @@ struct PairNewDeviceView: View {
     
     @State private var viewModel: PairNewDeviceViewModel = PairNewDeviceViewModel()
     @State private var showToast = false
-    @State private var isTapped: Bool = false
+    @State private var selector: Int? = nil
+    @State private var deviceToBePaired: Device = Device(productId: "", deviceId: "")
     
     @State var descriptiveName: String = ""
     
-    var deviceId: String;
-    var productId: String;
+    var deviceId: String
+    var productId: String
+    
     
     var body: some View {
         VStack {
@@ -64,6 +66,9 @@ struct PairNewDeviceView: View {
             
             HStack{
                 Spacer()
+                NavigationLink(destination: DeviceMainView(productId: deviceToBePaired.productId), tag: 1, selection: $selector)
+                {
+                }
                 
                 //Button for pairing device
                 Button(action: {
@@ -72,9 +77,25 @@ struct PairNewDeviceView: View {
                         showToast.toggle()
                     }
                     else{
+
                         //TODO: Pair device, initial or localOpen?
+
+                        //Creates device from the data
+                        deviceToBePaired = Device(productId: productId, deviceId: deviceId, readableName: descriptiveName)
+
+                        //Pairs the device (And saves it to the user)
+                        viewModel.localOpenPairing(deviceToBePaired)
+                        
+                        selector = 1
+                        
+
+                        
+                        //Navigation is empty because it cannot hold logic, but the View will still change when called
+                        //NavigationLink(destination: DeviceMainView(productId: deviceToBePaired.productId), isActive: $isTapped) {}
+
                         
                     }
+                    
                     
                 }, label: {
                     
@@ -91,9 +112,10 @@ struct PairNewDeviceView: View {
                 Spacer()
                 
                 //Cancel Button to go back to the IntroductionView
-                NavigationLink(destination: IntroductionView(), isActive: $isTapped) {
+                NavigationLink(destination: IntroductionView(), tag: 2, selection: $selector)
+                {
                     Button(action: {
-                        isTapped = true
+                        selector = 2
                     }, label: {
                         
                         Text("Cancel").fontWeight(.bold)
@@ -112,7 +134,7 @@ struct PairNewDeviceView: View {
             }
             Spacer()
             
-        }.navigationTitle("Pair device")
+        }.navigationTitle("Pair device").toolbar{MainToolbar()}
             .toast(isPresenting: $showToast){
                 AlertToast(type: .regular, title: "Please type a device name")
             }
