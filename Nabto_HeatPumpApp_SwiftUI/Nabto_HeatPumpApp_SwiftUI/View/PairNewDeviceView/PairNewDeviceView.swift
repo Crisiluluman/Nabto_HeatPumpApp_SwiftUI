@@ -14,13 +14,17 @@ struct PairNewDeviceView: View {
     @State private var viewModel: PairNewDeviceViewModel = PairNewDeviceViewModel()
     @State private var showToast = false
     @State private var selector: Int? = nil
-    @State private var deviceToBePaired: Device = Device(productId: "", deviceId: "")
+    //@State private var deviceToBePaired: Device = Device(productId: "", deviceId: "")
     
     @State var descriptiveName: String = ""
     
-    var deviceId: String
-    var productId: String
+    var deviceToBePaired: Device
+    //var deviceId: String
+    //var productId: String
     
+    init(deviceToBePaired: Device){
+        self.deviceToBePaired = deviceToBePaired
+    }
     
     var body: some View {
         VStack {
@@ -34,7 +38,7 @@ struct PairNewDeviceView: View {
             
             Spacer()
             
-            Text("DeviceId: \(deviceId)")
+            Text("DeviceId: \(deviceToBePaired.deviceId)")
                 .font(.title)
                 .padding(.bottom, 10.0)
                 .frame(width: 300.0, alignment: .leading)
@@ -66,7 +70,7 @@ struct PairNewDeviceView: View {
             
             HStack{
                 Spacer()
-                NavigationLink(destination: DeviceMainView(productId: deviceToBePaired.productId), tag: 1, selection: $selector)
+                NavigationLink(destination: DeviceMainView(device: deviceToBePaired), tag: 1, selection: $selector)
                 {
                 }
                 
@@ -81,8 +85,11 @@ struct PairNewDeviceView: View {
                         //TODO: Pair device, initial or localOpen?
 
                         //Creates device from the data
-                        deviceToBePaired = Device(productId: productId, deviceId: deviceId, readableName: descriptiveName)
-
+                        //deviceToBePaired = Device(productId: productId, deviceId: deviceId, readableName: descriptiveName)
+                        deviceToBePaired.readableName = descriptiveName
+                        
+                        
+                        
                         //Pairs the device (And saves it to the user)
                         viewModel.localOpenPairing(deviceToBePaired)
                         
@@ -140,12 +147,13 @@ struct PairNewDeviceView: View {
             }
     }
     
-    
+   /*
     struct PairNewDevice_Previews: PreviewProvider {
         static var previews: some View {
-            PairNewDeviceView(deviceId: "Test deviceID", productId: "Test productId")
+            //PairNewDeviceView(deviceId: "Test deviceID", productId: "Test productId")
         }
     }
+    */
 }
 
 

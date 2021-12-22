@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9D08B8F527696FA20046FA28 /* TestCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8F427696FA20046FA28 /* TestCodable.swift */; };
 		9D08B8F7276996520046FA28 /* PairedDevicesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8F6276996520046FA28 /* PairedDevicesViewModel.swift */; };
 		9D08B8FA276998E20046FA28 /* DeviceMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8F9276998E20046FA28 /* DeviceMainView.swift */; };
 		9D08B8FC2769A9A00046FA28 /* DeviceMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D08B8FB2769A9A00046FA28 /* DeviceMainViewModel.swift */; };
@@ -34,6 +33,12 @@
 		9D2DB6C22757D8BD00AC9087 /* PairedDevicesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6B82757D8BD00AC9087 /* PairedDevicesView.swift */; };
 		9D2DB6C32757D8BD00AC9087 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2DB6BA2757D8BD00AC9087 /* SplashScreenView.swift */; };
 		9D2DB6C42757D8BD00AC9087 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D2DB6BB2757D8BD00AC9087 /* SplashScreen.storyboard */; };
+		9D4B157D2772721D006BBA66 /* DeviceSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B157C2772721D006BBA66 /* DeviceSettingsView.swift */; };
+		9D4B157F2772722A006BBA66 /* DeviceSettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B157E2772722A006BBA66 /* DeviceSettingsViewModel.swift */; };
+		9D4B15822773129A006BBA66 /* AddUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B15812773129A006BBA66 /* AddUserView.swift */; };
+		9D4B1584277312AD006BBA66 /* AddUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B1583277312AD006BBA66 /* AddUserViewModel.swift */; };
+		9D4B158727731A1C006BBA66 /* AppSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B158627731A1C006BBA66 /* AppSettingsView.swift */; };
+		9D4B158A27731A34006BBA66 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4B158927731A34006BBA66 /* HelpView.swift */; };
 		9D4FB2A6275A10100025104C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FB2A5275A10100025104C /* User.swift */; };
 		9D4FB2A8275D08AE0025104C /* NabtoUserCoap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4FB2A7275D08AE0025104C /* NabtoUserCoap.swift */; };
 		A9D36AB606F138BCEEAA16AA /* Pods_Nabto_HeatPumpApp_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 118C67B5ACB93F8199135A36 /* Pods_Nabto_HeatPumpApp_SwiftUI.framework */; };
@@ -43,7 +48,6 @@
 		118C67B5ACB93F8199135A36 /* Pods_Nabto_HeatPumpApp_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nabto_HeatPumpApp_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B158927E575006BB76457FB /* Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI/Pods-Nabto_HeatPumpApp_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		67BDEC21F16786BFED5766E9 /* Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-Nabto_HeatPumpApp_SwiftUI/Pods-Nabto_HeatPumpApp_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
-		9D08B8F427696FA20046FA28 /* TestCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCodable.swift; sourceTree = "<group>"; };
 		9D08B8F6276996520046FA28 /* PairedDevicesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairedDevicesViewModel.swift; sourceTree = "<group>"; };
 		9D08B8F9276998E20046FA28 /* DeviceMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMainView.swift; sourceTree = "<group>"; };
 		9D08B8FB2769A9A00046FA28 /* DeviceMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceMainViewModel.swift; sourceTree = "<group>"; };
@@ -71,6 +75,12 @@
 		9D2DB6B82757D8BD00AC9087 /* PairedDevicesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PairedDevicesView.swift; sourceTree = "<group>"; };
 		9D2DB6BA2757D8BD00AC9087 /* SplashScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
 		9D2DB6BB2757D8BD00AC9087 /* SplashScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		9D4B157C2772721D006BBA66 /* DeviceSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettingsView.swift; sourceTree = "<group>"; };
+		9D4B157E2772722A006BBA66 /* DeviceSettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceSettingsViewModel.swift; sourceTree = "<group>"; };
+		9D4B15812773129A006BBA66 /* AddUserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserView.swift; sourceTree = "<group>"; };
+		9D4B1583277312AD006BBA66 /* AddUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserViewModel.swift; sourceTree = "<group>"; };
+		9D4B158627731A1C006BBA66 /* AppSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettingsView.swift; sourceTree = "<group>"; };
+		9D4B158927731A34006BBA66 /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
 		9D4FB2A5275A10100025104C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9D4FB2A7275D08AE0025104C /* NabtoUserCoap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NabtoUserCoap.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,7 +222,6 @@
 				9D2DB6AD2757D8BC00AC9087 /* Device.swift */,
 				9D4FB2A5275A10100025104C /* User.swift */,
 				9D0F0180276655DE00B8C737 /* HeatPump.swift */,
-				9D08B8F427696FA20046FA28 /* TestCodable.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -220,6 +229,10 @@
 		9D2DB6AE2757D8BD00AC9087 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				9D4B158827731A29006BBA66 /* HelpView */,
+				9D4B158527731A0D006BBA66 /* AppSettingsView */,
+				9D4B158027731283006BBA66 /* AddUserView */,
+				9D4B157B2772720A006BBA66 /* DeviceSettingsView */,
 				9D08B8F8276998D50046FA28 /* DeviceMainView */,
 				9D0F017B27664F5700B8C737 /* HeatPumpStateView */,
 				9D0F0171275E8CDD00B8C737 /* Toolbars */,
@@ -284,6 +297,40 @@
 				9D2DB6BB2757D8BD00AC9087 /* SplashScreen.storyboard */,
 			);
 			path = SplashScreenView;
+			sourceTree = "<group>";
+		};
+		9D4B157B2772720A006BBA66 /* DeviceSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B157C2772721D006BBA66 /* DeviceSettingsView.swift */,
+				9D4B157E2772722A006BBA66 /* DeviceSettingsViewModel.swift */,
+			);
+			path = DeviceSettingsView;
+			sourceTree = "<group>";
+		};
+		9D4B158027731283006BBA66 /* AddUserView */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B15812773129A006BBA66 /* AddUserView.swift */,
+				9D4B1583277312AD006BBA66 /* AddUserViewModel.swift */,
+			);
+			path = AddUserView;
+			sourceTree = "<group>";
+		};
+		9D4B158527731A0D006BBA66 /* AppSettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B158627731A1C006BBA66 /* AppSettingsView.swift */,
+			);
+			path = AppSettingsView;
+			sourceTree = "<group>";
+		};
+		9D4B158827731A29006BBA66 /* HelpView */ = {
+			isa = PBXGroup;
+			children = (
+				9D4B158927731A34006BBA66 /* HelpView.swift */,
+			);
+			path = HelpView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +453,7 @@
 				9D2DB6C02757D8BD00AC9087 /* DiscoverDevicesView.swift in Sources */,
 				9D2DB6BD2757D8BD00AC9087 /* Device.swift in Sources */,
 				9D2DB6C32757D8BD00AC9087 /* SplashScreenView.swift in Sources */,
+				9D4B158A27731A34006BBA66 /* HelpView.swift in Sources */,
 				9D2DB69C2757C41400AC9087 /* Nabto_HeatPumpApp_SwiftUIApp.swift in Sources */,
 				9D0F017D27664F6B00B8C737 /* HeatPumpStateView.swift in Sources */,
 				9D2DB6BC2757D8BD00AC9087 /* NabtoDeviceCoap.swift in Sources */,
@@ -414,17 +462,21 @@
 				9D0F0181276655DE00B8C737 /* HeatPump.swift in Sources */,
 				9D08B8FC2769A9A00046FA28 /* DeviceMainViewModel.swift in Sources */,
 				9D0F017727664B4100B8C737 /* HeatPumpState.swift in Sources */,
+				9D4B158727731A1C006BBA66 /* AppSettingsView.swift in Sources */,
 				9D2DB6BF2757D8BD00AC9087 /* PairNewDeviceView.swift in Sources */,
 				9D4FB2A8275D08AE0025104C /* NabtoUserCoap.swift in Sources */,
+				9D4B15822773129A006BBA66 /* AddUserView.swift in Sources */,
 				9D0F017F276650E800B8C737 /* HeatPumpStateViewModel.swift in Sources */,
 				9D0F0164275D0DB100B8C737 /* NabtoAccessConnect.swift in Sources */,
 				9D0F0170275E53D500B8C737 /* MainToolbar.swift in Sources */,
 				9D2DB6C22757D8BD00AC9087 /* PairedDevicesView.swift in Sources */,
+				9D4B1584277312AD006BBA66 /* AddUserViewModel.swift in Sources */,
 				9D0F0175275FB7B100B8C737 /* PairNewDeviceViewModel.swift in Sources */,
-				9D08B8F527696FA20046FA28 /* TestCodable.swift in Sources */,
 				9D08B8F7276996520046FA28 /* PairedDevicesViewModel.swift in Sources */,
+				9D4B157D2772721D006BBA66 /* DeviceSettingsView.swift in Sources */,
 				9D2DB6BE2757D8BD00AC9087 /* IntroductionView.swift in Sources */,
 				9D0F0167275D171600B8C737 /* IntroductionViewModel.swift in Sources */,
+				9D4B157F2772722A006BBA66 /* DeviceSettingsViewModel.swift in Sources */,
 				9D4FB2A6275A10100025104C /* User.swift in Sources */,
 				9D2DB6C12757D8BD00AC9087 /* NotPairedView.swift in Sources */,
 			);

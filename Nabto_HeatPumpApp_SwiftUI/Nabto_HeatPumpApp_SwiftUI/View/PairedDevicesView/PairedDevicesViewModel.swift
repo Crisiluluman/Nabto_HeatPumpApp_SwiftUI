@@ -16,8 +16,17 @@ final class PairedDevicesViewModel: ObservableObject{
     
     private var deviceAccess: NabtoDeviceCoap = NabtoDeviceCoap()
     
-    func displayDevices(){
-        //devices = deviceAccess.devices
+    init(){
+        //print("Devices 1: \(devices)")
+        devices = deviceAccess.userAccess.user.devices
+        //print("Devices 2: \(devices)")
+
+    }
+    
+    func refreshDevices(){
+        print("Device count: \(devices.count)")
+        devices = deviceAccess.userAccess.user.devices
+
     }
     
     

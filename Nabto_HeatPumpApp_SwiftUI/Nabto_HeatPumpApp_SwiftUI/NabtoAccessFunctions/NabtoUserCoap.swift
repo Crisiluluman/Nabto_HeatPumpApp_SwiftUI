@@ -8,13 +8,15 @@
 import Foundation
 import NabtoEdgeClient
 
-public class NabtoUserCoap : NabtoAccessConnect{
+public class NabtoUserCoap : NabtoAccessConnect, ObservableObject{
     
-    var user: User = User(role: "", username: "")
+    @Published var user: User
     
     let userKey: String = "userKey"
     
     override init() {
+        user = User(role: "", username: "")
+
         super.init()
         getUser()
     }
@@ -24,7 +26,12 @@ public class NabtoUserCoap : NabtoAccessConnect{
         if let encodedData = try? JSONEncoder().encode(user){
             UserDefaults.standard.set(encodedData, forKey: userKey)
         }
-       // print("Succes? \(user.username)")
+        
+        /*for (userKey, value) in UserDefaults.standard.dictionaryRepresentation(){
+            print("\(userKey) = \(value) \n")
+        }*/
+        
+        // print("JSON at Save: \(user.asJson())")
     }
     
     //Returns the saved user from the storage (Currently only one user)
@@ -36,6 +43,8 @@ public class NabtoUserCoap : NabtoAccessConnect{
         
         self.user = savedUser
         
+        // print("JSON at Get: \(user.asJson())")
+
         //print("SavedUser is: \(savedUser.username)")
         //print("User is: \(self.user.username)")
 

@@ -8,30 +8,20 @@
 import Foundation
 import SwiftUI
 
-final class DeviceMainViewModel {
+final class DeviceMainViewModel: NabtoUserCoap {
     
-    private var userAccess : NabtoUserCoap = NabtoUserCoap()
-    private var deviceAccess : NabtoDeviceCoap = NabtoDeviceCoap()
+    //private var userAccess : NabtoUserCoap = NabtoUserCoap()
+    private var deviceAccess : NabtoDeviceCoap = NabtoDeviceCoap() //TODO: Fix, not used
 
+    //let userAccess: NabtoUserCoap
 
-    init(){
-        deviceAccess.getDevicesFromUser()
-        print("Please let this be right \(userAccess.user.username)")
-        print("NANI THE FLIP \(userAccess.user.devices.count)")
+    //init(){
+        //print("Please let this be right \(userAccess.user.username)")
+        //print("NANI THE FLIP \(userAccess.user.devices.count)")
        // userAcces =
-    }
+    //}
 
-    func testStuff(){
-        print("User IS: \(userAccess.user.username)")
-        print("Devices: \(userAccess.user.devices.count)")
 
-        
-        for device in userAccess.user.devices {
-            print("ProductID: \(device.productId)")
-            
-            print("HeatPumpState \(device.heatPumpState.asJson())")
-        }
-    }
     
     
     

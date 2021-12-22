@@ -11,7 +11,6 @@ public class HeatPumpState{
     
     func getHeatPumpState(){
         
-        
     }
     
     func createDefaultState(){

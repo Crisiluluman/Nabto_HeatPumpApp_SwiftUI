@@ -8,20 +8,23 @@
 import Foundation
 import NabtoEdgeClient
 import CBOR
+import SwiftUI
 
 public class NabtoDeviceCoap : NabtoAccessConnect, ObservableObject {
         
     let deviceKey: String = "deviceKey"
-    private var userAccess: NabtoUserCoap = NabtoUserCoap()
-    
-     @Published var devices: [Device] = []
+    //private var userAccess: NabtoUserCoap = NabtoUserCoap()
+    @ObservedObject var userAccess: NabtoUserCoap = NabtoUserCoap() //Er tom siger Debugger
+
+     //@Published var devices: [Device] = []
     
     //Single user of the app atm
     //private var staticUsername: String = self.userAccess.user.username
     
     override init(){
         super.init()
-        print("Init: \(userAccess.user.devices.count) at \(userAccess.user.username)")
+        getDevicesFromUser()
+        //print("Init: \(userAccess.user.devices.count) at \(userAccess.user.username)")
         //userAccess.getUser()
         //getDevicesFromUser()
         //print("Totalllllll \(userAccess.user.devices.count)")
@@ -36,35 +39,79 @@ public class NabtoDeviceCoap : NabtoAccessConnect, ObservableObject {
 
     
     //Converts device into data that is saved, this should be used whenever the device is editted, deleted or created
-    func saveDevice(_ deviceToBeSaved: Device){
-        if let encodedData = try? JSONEncoder().encode(deviceToBeSaved){
+    func saveDevice(){
+        
+        if let encodedData = try? JSONEncoder().encode(userAccess.user.devices){
             UserDefaults.standard.set(encodedData, forKey: deviceKey)
         }
+        
+        //print("\n USERACCESS: \(userAccess.user.devices.count)\n")
+        
+        
+        /*for (deviceKey, value) in UserDefaults.standard.dictionaryRepresentation(){
+            print("\(deviceKey) = \(value) \n")
+        }*/
+        //getDevicesFromUser()
 
-        //print("The user im saving at is: \(userAccess.user.username)")
+
+    }
+    
+    func addDeviceToUser(_ deviceToBeAdded: Device){
+        self.userAccess.user.devices.append(deviceToBeAdded)
+        saveDevice()
         
-        userAccess.user.devices.append(deviceToBeSaved)
+        //print("JSON-Device at ADD: \(deviceToBeAdded)")
         
-        print("\n Appending: \(userAccess.user.devices.count) on \(userAccess.user.username) \n") // <-- Works
+        //print("JSON-DeviceList at ADD: \(userAccess.user.asJson())")
+
+
     }
     
     //Returns the saved user from the storage (Currently only one user)
     func getDevicesFromUser(){
-    
+        //print(" UserAccessDevices: \(userAccess.user.devices.count)")
+        
+        //print(" DO I GET HERE??: \(userAccess.user.username)")
+        
         if let data = UserDefaults.standard.data(forKey: deviceKey) {
-            do {
-                // Create JSON Decoder
-                let decoder = JSONDecoder()
+            //if let data = UserDefaults.standard.string(forKey: deviceKey) {
+            if let decoded = try? JSONDecoder().decode([Device].self, from: data){
+                self.userAccess.user.devices = decoded
+                
+                //print("Decoded: \(decoded.count)")
+                //print("NOT Decoded: \(userAccess.user.devices.count)")
 
-                // Decode Note
-                let savedDevices = try decoder.decode([Device].self, from: data)
-                self.devices = savedDevices
-
-            } catch {
-                print("Unable to Decode Devices (\(error))")
+               // print("JSON-InsideGetFromUser: \(userAccess.user.asJson())")
+                return
             }
         }
+        
+        //print("END OF IF LET: \(userAccess.user.devices.count)")
+        
+        /*guard
+         let data = UserDefaults.standard.data(forKey: deviceKey),
+         let savedDevices = try? JSONDecoder().decode([Device].self, from: data)
+         else {return}*/
+        
+        //Saved devices indeholder alt det rigtige (Siger Debugger)
+        //userAccess.user.devices = savedDevices
+        
+        
     }
+    
+    
+    //Delete specific device from App (The user, as there is currently only one)
+    //TODO: Only the admin can delete??
+    func deleteDevice(deviceToBeDeleted: Device){
+        
+        if let index = userAccess.user.devices.firstIndex(where: { $0.id == deviceToBeDeleted.id }){
+            userAccess.user.devices.remove(at: index)
+            //TODO: Test if it works in all cases
+            saveDevice()
+        }
+
+    }
+
     
     //Simple Hello World Test
     func simpleCoapTest(_ device: Device){
@@ -130,6 +177,7 @@ public class NabtoDeviceCoap : NabtoAccessConnect, ObservableObject {
     
     //Creates a local Open pairing
     func localOpenPairing(_ device: Device){
+
         do {
 
             let username = userAccess.user.username
@@ -169,7 +217,7 @@ public class NabtoDeviceCoap : NabtoAccessConnect, ObservableObject {
             
             }
             
-            saveDevice(device)
+            addDeviceToUser(device)
 
             //Printing response
             //let readableResponse: String = try String(decoding: response.payload, as: UTF8.self)
@@ -185,7 +233,7 @@ public class NabtoDeviceCoap : NabtoAccessConnect, ObservableObject {
         catch let error {
             print(error)
         }
-
+    
     }
     
     
@@ -200,7 +248,6 @@ public class NabtoDeviceCoap : NabtoAccessConnect, ObservableObject {
             let coap = try connection.createCoapRequest(method: "POST", path: "/iam/pairing/local-initial")
             
 
-            
             let encoder = JSONEncoder()
             encoder.outputFormatting = .prettyPrinted
             
@@ -223,6 +270,9 @@ public class NabtoDeviceCoap : NabtoAccessConnect, ObservableObject {
             
             }
 
+            addDeviceToUser(device)
+
+            
         }
         
         catch NabtoEdgeClientError.ALLOCATION_ERROR{

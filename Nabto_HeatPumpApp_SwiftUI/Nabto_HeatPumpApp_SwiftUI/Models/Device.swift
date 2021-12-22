@@ -10,7 +10,7 @@ import Foundation
 
 // : Identifiable For unique ID's using "var id = UUID()"
 
-struct Device : Identifiable, Codable {
+class Device : Identifiable, Codable {
     var id : UUID // Probably used for the list, so it can identify each element uniqely
     
     var productId: String
@@ -43,7 +43,7 @@ struct Device : Identifiable, Codable {
     
     
     func asJson() -> String {
-        let sctElement = sct != nil ? "\"ServerConnectToken\": \"\(sct!)\",\n" : ""
+        let sctElement = sct != nil ? "\"ServerConnectToken\": \"\(sct!)\"\n" : ""
         return """
                {\n
                \"ProductId\": \"\(self.productId)\",\n

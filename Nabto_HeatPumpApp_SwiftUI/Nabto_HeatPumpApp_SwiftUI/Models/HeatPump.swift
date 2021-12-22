@@ -41,6 +41,7 @@ struct HeatPump : Codable {
         heatPumpMode = HeatPumpMode.HEAT_PUMP_MODE_COOL
     }
     
+    
 
     
 

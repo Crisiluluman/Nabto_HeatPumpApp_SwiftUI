@@ -18,6 +18,10 @@ struct IntroductionView: View {
     
     @State var _username: String = ""
     
+    init(){
+        //Resets Userdefaults for testing a clean app
+        //viewModel.resetUserdefaults()
+    }
     
     
     var body: some View {
@@ -44,7 +48,14 @@ struct IntroductionView: View {
                         Spacer()
                         
                         //Probably not best in practive for navigating here, but I tried
+                        
+                        //TODO: Needs fixin'
+                        //You can just go back from NotPairedView and edit the username (List of usernames)??
                         NavigationLink(destination: NotPairedView(), tag: 1, selection: $selection)
+                        {
+                        }
+                        
+                        NavigationLink(destination: PairedDevicesView(username: _username), tag: 2, selection: $selection)
                         {
                         }
                         
@@ -56,6 +67,9 @@ struct IntroductionView: View {
                             onCommit: {
                                 if(_username.isEmpty){
                                     showToast.toggle()
+                                }
+                                if(viewModel.getUsername() == _username){
+                                    self.selection = 2
                                 }
                                 else{
                                     viewModel.createAdmin(username: _username)
@@ -97,10 +111,10 @@ struct IntroductionView: View {
                     }
                 }*/
                 
-            //}
+            }.navigationBarHidden(true).accentColor((Color("NabtoOrange")))
             
             //Hides the navigationbar on the IntroductionView, but colors the other navigationbarTexts with an orange color
-        }.navigationBarHidden(true).accentColor((Color("NabtoOrange")))
+        //}.navigationBarHidden(true).accentColor((Color("NabtoOrange")))
         
     }
     

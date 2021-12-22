@@ -21,4 +21,8 @@ final class PairNewDeviceViewModel : ObservableObject{
         deviceAccess.localOpenPairing(device)
     }
     
+    /*func getCurrentUserRole()-> String{
+        return deviceAccess.userAccess.user.role
+    }
+     */
 }

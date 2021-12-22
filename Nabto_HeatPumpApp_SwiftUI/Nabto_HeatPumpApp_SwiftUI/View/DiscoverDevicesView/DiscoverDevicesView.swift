@@ -77,7 +77,7 @@ struct DiscoverDevicesView: View {
                     List(mdnsReciever.discoveredDevices)
                     {
                         device in
-                        NavigationLink(destination: PairNewDeviceView(deviceId: device.deviceId, productId: device.productId), isActive: $isTapped)
+                        NavigationLink(destination: PairNewDeviceView(deviceToBePaired: device), isActive: $isTapped)
                         {
                             HStack {
                                 Image("emptyImg")
@@ -124,22 +124,25 @@ struct DiscoverDevicesView: View {
                 let resultProductId : String = result.productId
                 let resultDeviceId : String = result.deviceId
                 
-                
                 let txt = result.txtItems.description
                 let txtArr = txt.components(separatedBy: "," )
                 var txt1 = txtArr[0]
-                
+                var txt2 = txtArr[1]
+                var txt3 = txtArr[2]
+
                 txt1 = (txt1.components(separatedBy: NSCharacterSet.decimalDigits) as NSArray).componentsJoined(by: "")
-                let wordToRemove = "deviceid productid"
+                let wordToRemove = ""
                 
+
                 if let range = txt1.range(of: wordToRemove) {
                     txt1.removeSubrange(range)
                 }
-                
-                let device: Device = Device(productId: resultProductId, deviceId: resultDeviceId, deviceType: txt1)
 
-                
-                
+                let endOfSentence = txt1.lastIndex(of: ":")!
+                let firstSentence = txt1[endOfSentence...]
+
+                let device: Device = Device(productId: resultProductId, deviceId: resultDeviceId, deviceType: String(firstSentence))
+       
                 self.discoveredDevices.append(device)
                 
                 

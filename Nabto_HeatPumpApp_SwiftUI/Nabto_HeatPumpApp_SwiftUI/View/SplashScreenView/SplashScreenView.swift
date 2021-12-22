@@ -5,32 +5,52 @@
 //  Created by Christopher Larsen on 29/09/2021.
 //
 
-import SwiftUI
 
+import SwiftUI
+/*
 struct SplashscreenView: View {
+    
+    @State private var viewModel: SplashscreenViewModel = SplashscreenViewModel()
+    
+    @State private var selection: Int? = nil
+    
+    
+    
+    init(){
+        if(viewModel.getUser()){
+            selection = 1
+        }
+        
+        else{
+            selection = 2
+        }
+    }
+    
     var body: some View {
         
-
+        
+        
         NavigationView
         {
             
-            ZStack {
-                Color("NabtoOrange")
-                    .ignoresSafeArea()
-                    .opacity(0.6)
-                    //.navigationTitle(Text("Front"))
+            NavigationLink(destination: IntroductionView(), tag: 2, selection: $selection)
+            {
+                //Text("\(selection ?? 0)")
+                //IntroductionView()
                 
-                
-                NavigationLink(destination: IntroductionView(), label: {
-                    Text("Nabto").font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundColor(Color("LightGreyText"))
-                    
-                })
             }
-        }.navigationBarHidden(true)
-        
+            
+            NavigationLink(destination: PairedDevicesView(_username: ""), tag: 1, selection: $selection)
+            {
+                //PairedDevicesView()
+            }
+            
+            
+        }.navigationBarHidden(true).accentColor((Color("NabtoOrange")))
+            .navigationViewStyle(.stack)
     }
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
@@ -38,3 +58,22 @@ struct ContentView_Previews: PreviewProvider {
         SplashscreenView()
     }
 }
+
+final class SplashscreenViewModel{
+    var deviceAccess: NabtoDeviceCoap = NabtoDeviceCoap()
+    
+    func getUser() -> Bool{
+        if (deviceAccess.userAccess.user.username.isEmpty){
+            print("FALSE")
+            
+            return false
+        }
+        else {
+            print("TRUE")
+            
+            return true
+        }
+    }
+    
+}
+*/

@@ -63,7 +63,8 @@ struct NotPairedView: View {
                             .fontWeight(.bold)
                             .padding(20.0)
                             .foregroundColor(.white)
-                    }.frame(width: 300.0)                            .background(Color("NabtoOrange"))
+                    }.frame(width: 300.0)
+                        .background(Color("NabtoOrange"))
                         .cornerRadius(5)
                     
                 }

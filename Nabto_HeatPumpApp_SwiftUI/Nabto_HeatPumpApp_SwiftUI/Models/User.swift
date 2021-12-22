@@ -29,14 +29,18 @@ struct User: Codable {
         
         devices = []
         
+        //let testDevice = Device(productId: "TestProductId", deviceId: "TestDeviceId", readableName: "PumpXYZ", deviceType: "TestPump")
+        //devices.append(testDevice)
+        
     }
     
     func asJson() -> String {
         let sctElement = sct != nil ? "\"ServerConnectToken\": \"\(sct!)\",\n" : ""
         return """
                    {\n
-                   \"Admin\": \"\(self.role)\",\n
+                   \"Role\": \"\(self.role)\",\n
                    \"Username\": \"\(self.username)\",\n
+                   \"Devices\": \"\(self.devices)\",\n
                    \(sctElement)
                    \n}
                    """
