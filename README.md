@@ -22,10 +22,10 @@ This will install all needed SDK's to run the code.
 The project has *three* main folders, that attempt to follow the "MVVM" design pattern.
 
 * Models
- * Classes and Structs for data like "Device" and "User" etc
+  * Classes and Structs for data like "Device" and "User" etc
 
 * NabtoAccessFunctions
- * Classes that involve and handle Nabto technologies to, for example, pair devices using CoAP
+  * Classes that involve and handle Nabto technologies to, for example, pair devices using CoAP
 
 * View
- * Includes a list os subfolders with Views and ViewModels for the different application Views.
+  * Includes a list os subfolders with Views and ViewModels for the different application Views.
