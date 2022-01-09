@@ -4,6 +4,7 @@ This app helps to illustrate how Nabto's technology is used and works with a dem
 
 ## Installation 
 * Make sure to have https://cocoapods.org installed
+* XCode needs to be launched using Rosetta, see the following guide for [instructions:](https://www.macworld.com/article/338843/how-to-force-a-native-m1-mac-app-to-run-as-an-intel-app-instead.html)
 
 
 Open a terminal and navigate to:
